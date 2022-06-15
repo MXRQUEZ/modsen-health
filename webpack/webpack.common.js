@@ -29,7 +29,7 @@ module.exports = {
           {
             loader: 'ts-loader',
             options: {
-              transpileOnly: true, // we don't type checking during the compilation - it's task for CodeEditor
+              transpileOnly: true, // we don't check types during the compilation - it's task for CodeEditor
             },
           }
         ],
