@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from "styled-components";
 
 export const StyledAppWrapper = styled.div`
   min-height: 100%;
@@ -18,11 +18,24 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     margin: 0;
     border: 0;
+    -moz-box-sizing: border-box;
+	  -webkit-box-sizing: border-box;
     box-sizing: border-box;
   }
 
   a {
     text-decoration: none;
+  }
+
+  a:focus, a:active{
+    outline: none;
+  }
+
+  nav,
+  footer,
+  header,
+  aside {
+    display: block;
   }
   
   ul,
@@ -47,15 +60,24 @@ export const GlobalStyle = createGlobalStyle`
 
   html,
   body {
+    width: 100%;
     height: 100%;
     line-height: 1;
     font-size: 16px;
     color: #333333;
     font-family: 'Roboto';
     font-weight: 700;
+    -ms-text-size-adjust: 100%;
+	  -moz-text-size-adjust: 100%;
+	  -webkit-text-size-adjust: 100%;
   }
 
   i {
     color: #215ee9;
+  }
+
+  button {
+    cursor: pointer;
+    outline: none;
   }
 `;

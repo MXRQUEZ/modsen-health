@@ -1,6 +1,6 @@
-import { FC } from 'react';
-import { GlobalStyle, StyledAppWrapper } from 'styles/styled-global';
-import Header from './header';
+import { FC } from "react";
+import { GlobalStyle, StyledAppWrapper } from "styles/styled-global";
+import Header from "./header";
 
 const App: FC = () => {
   return (

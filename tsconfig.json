@@ -40,5 +40,5 @@
     "noUnusedParameters": true,
   },
 
-  "exclude": ["node_modules", "dist", "build", ".vscode"]
+  "exclude": ["node_modules", "dist", "build", ".vscode", "webpack"],
 }

@@ -76,7 +76,6 @@ module.exports = {
       "warn",
       {
         endOfLine: "auto",
-        singleQuote: true
       }
     ],
 
