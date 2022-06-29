@@ -104,6 +104,12 @@ export const GlobalStyles = createGlobalStyle`
     display: none;
   }
 
+  input:focus,
+  input:hover {
+    border: none;
+    outline: none;
+  }
+
   button::-moz-focus-inner {
     padding: 0;
     border: 0;

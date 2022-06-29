@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { StyledContentContainer } from "styles/styled-global";
-import Navbar from "./navbar";
+import Navbar from "..";
 import { StyledHeader, StyledHeaderContainer, StyledHeaderTitleWrapper, StyledHeaderTitle } from "./styled";
 
 const Header: FC = () => {

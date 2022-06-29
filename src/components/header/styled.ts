@@ -14,24 +14,16 @@ export const StyledHeaderNavbar = styled.nav`
   @media only screen and (max-width: 991.98px) {
     gap: 50px;
   }
-
-  @media only screen and (max-width: 767.98px) {
-    #pagesbar,
-    #authbar_login,
-    #authbar_register {
-      display: none;
-    }
-  }
-
-  @media only screen and (max-width: 479.98px) {
-    gap: 20px;
-  }
 `;
 
 export const StyledNavbarMenu = styled.ul`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media only screen and (max-width: 767.98px) {
+    display: none;
+  }
 
   & li {
     text-align: center;
@@ -60,23 +52,6 @@ export const StyledNavbarMenu = styled.ul`
         filter: brightness(120%);
       }
     }
-  }
-`;
-
-export const StyledRegisterButton = styled.button`
-  color: white;
-  background-color: #215ee9;
-  border-radius: 40px;
-  padding: 15px 30px;
-  transition: filter 0.3s ease-in 0s;
-
-  &:hover,
-  &:focus {
-    filter: brightness(120%);
-  }
-
-  @media only screen and (max-width: 991.98px) {
-    padding: 10px 20px;
   }
 `;
 
