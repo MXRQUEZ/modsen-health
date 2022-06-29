@@ -15,12 +15,8 @@ export const StyledContentContainer = styled.div`
     max-width: 1100px;
   }
 
-  @media only screen and (max-width: 1200px) {
+  @media only screen and (max-width: 1250px) {
     max-width: 900px;
-  }
-
-  @media only screen and (max-width: 1000px) {
-    max-width: 800px;
   }
 
   @media only screen and (max-width: 991.98px) {

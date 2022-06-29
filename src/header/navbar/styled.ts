@@ -19,25 +19,30 @@ export const StyledNavbarMenu = styled.ul`
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-left: 100px;
+
+  @media only screen and (max-width: 1250px) {
+    padding-left: 10px;
+  }
+
+  @media only screen and (max-width: 991.98px) {
+    padding-left: 40px;
+  }
 
   & li {
     text-align: center;
     white-space: nowrap;
-    line-height: calc(19 / 14 * 100%);
+    line-height: calc(19 / 16 * 100%);
     position: relative;
     margin-right: 45px;
     cursor: pointer;
 
-    @media only screen and (max-width: 1200px) {
-      margin-right: 40px;
-    }
-
-    @media only screen and (max-width: 991.98px) {
+    @media only screen and (max-width: 1250px) {
       margin-right: 30px;
     }
 
-    @media only screen and (max-width: 767.98px) {
-      margin-rigth: 25px;
+    @media only screen and (max-width: 991.98px) {
+      margin-right: 20px;
     }
 
     & .notification_bell {
@@ -64,6 +69,10 @@ export const StyledRegisterButton = styled.button`
   &:hover,
   &:focus {
     filter: brightness(120%);
+  }
+
+  @media only screen and (max-width: 991.98px) {
+    padding: 10px 20px;
   }
 `;
 

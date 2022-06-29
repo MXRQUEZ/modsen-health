@@ -26,14 +26,26 @@ export const StyledHeaderTitleWrapper = styled.div`
     filter: brightness(120%);
   }
 
-  @media only screen and (max-width: 1200px) {
+  @media only screen and (max-width: 1250px) {
     margin-right: 40px;
+  }
+
+  @media only screen and (max-width: 991.98px) {
+    margin-right: 10px;
   }
 `;
 
 export const StyledHeaderTitle = styled.span`
   white-space: nowrap;
   margin-left: 10px;
+
+  @media only screen and (max-width: 991.98px) {
+    display: none;
+  }
+
+  @media only screen and (max-width: 767.98px) {
+    display: block;
+  }
 
   @media only screen and (max-width: 479.98px) {
     display: none;
