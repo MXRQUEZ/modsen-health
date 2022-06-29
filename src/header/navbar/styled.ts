@@ -54,7 +54,7 @@ export const StyledNavbarMenu = styled.ul`
 
       &:hover,
       &:focus {
-        animation: ${bellshake} 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+        animation: ${bellshake} 0.7s cubic-bezier(0.36, 0.07, 0.19, 0.97) infinite;
         backface-visibility: hidden;
         transform-origin: top right;
         filter: brightness(120%);
@@ -144,7 +144,7 @@ export const StyledCounter = styled.span`
   z-index: 3;
 
   &:hover ~ i {
-    animation: ${bellshake} 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+    animation: ${bellshake} 0.7s cubic-bezier(0.36, 0.07, 0.19, 0.97) infinite;
     backface-visibility: hidden;
     transform-origin: top right;
     filter: brightness(120%);
