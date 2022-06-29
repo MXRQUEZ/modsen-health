@@ -34,4 +34,8 @@ export const StyledHeaderTitleWrapper = styled.div`
 export const StyledHeaderTitle = styled.span`
   white-space: nowrap;
   margin-left: 10px;
+
+  @media only screen and (max-width: 479.98px) {
+    display: none;
+  }
 `;

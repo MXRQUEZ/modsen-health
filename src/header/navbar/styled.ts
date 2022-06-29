@@ -6,7 +6,7 @@ export const StyledHeaderNavbar = styled.nav`
   justify-content: space-between;
   align-items: center;
 
-  @media only screen and (max-width: 787.98px) {
+  @media only screen and (max-width: 767.98px) {
     #pagesbar,
     #authbar_login,
     #authbar_register {
@@ -90,7 +90,7 @@ export const StyledMenuItem = styled.li`
 export const StyledBurgerMenu = styled.button`
   display: none;
 
-  @media only screen and (max-width: 787.98px) {
+  @media only screen and (max-width: 767.98px) {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -127,8 +127,9 @@ export const StyledCounter = styled.span`
   justify-content: center;
 
   position: absolute;
-  top: -10px;
-  right: -10px;
+  top: -8px;
+  right: -8px;
+  z-index: 3;
 
   &:hover ~ i {
     animation: ${bellshake} 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
