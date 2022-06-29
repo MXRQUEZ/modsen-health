@@ -9,7 +9,6 @@ export const StyledAppWrapper = styled.div`
 export const StyledContentContainer = styled.div`
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 20px;
 
   @media only screen and (max-width: 1500px) {
     max-width: 1100px;
@@ -17,6 +16,7 @@ export const StyledContentContainer = styled.div`
 
   @media only screen and (max-width: 1250px) {
     max-width: 900px;
+    padding: 0 20px;
   }
 
   @media only screen and (max-width: 991.98px) {

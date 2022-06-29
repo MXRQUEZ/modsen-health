@@ -45,6 +45,10 @@ export const StyledNavbarMenu = styled.ul`
       margin-right: 20px;
     }
 
+    @media only screen and (max-width: 767.98px) {
+      margin-right: 50px;
+    }
+
     & .notification_bell {
       position: relative;
 
@@ -105,7 +109,6 @@ export const StyledBurgerMenu = styled.button`
     justify-content: space-between;
     position: relative;
     height: 18px;
-    margin-right: 20px;
 
     & span {
       height: 2px;
