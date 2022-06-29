@@ -15,16 +15,16 @@ export const StyledHeaderNavbar = styled.nav`
     gap: 50px;
   }
 
-  @media only screen and (max-width: 479.98px) {
-    gap: 20px;
-  }
-
   @media only screen and (max-width: 767.98px) {
     #pagesbar,
     #authbar_login,
     #authbar_register {
       display: none;
     }
+  }
+
+  @media only screen and (max-width: 479.98px) {
+    gap: 20px;
   }
 `;
 

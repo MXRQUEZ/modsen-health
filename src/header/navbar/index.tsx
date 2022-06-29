@@ -1,12 +1,6 @@
 import { FC } from "react";
-import {
-  StyledHeaderNavbar,
-  StyledNavbarMenu,
-  StyledMenuItem,
-  StyledRegisterButton,
-  StyledBurgerMenu,
-  StyledCounter,
-} from "./styled";
+import Button from "@mui/material/Button";
+import { StyledHeaderNavbar, StyledNavbarMenu, StyledMenuItem, StyledBurgerMenu, StyledCounter } from "./styled";
 
 const pageNames = ["Home", "Services", "Clinic", "Doctors", "Contact"];
 
@@ -23,7 +17,9 @@ const Navbar: FC = () => {
           Log In
         </StyledMenuItem>
         <li id="authbar_register" aria-label="register">
-          <StyledRegisterButton aria-label="register button">Register</StyledRegisterButton>
+          <Button variant="contained" aria-label="register button">
+            Register
+          </Button>
         </li>
         <StyledMenuItem aria-label="notifications">
           <StyledCounter>2</StyledCounter>

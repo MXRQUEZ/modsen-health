@@ -6,6 +6,10 @@ export const StyledHeader = styled.header`
   left: 0;
   top: 0;
   z-index: 50;
+
+  @media only screen and (max-width: 767.98px) {
+    position: fixed;
+  }
 `;
 
 export const StyledHeaderContainer = styled.div`

@@ -1,11 +1,13 @@
 import { FC } from "react";
 import { StyledContentContainer } from "styles/styled-global";
+import { StyledMain } from "./styled";
 
 const Main: FC = () => {
   return (
-    <main>
+    <StyledMain>
       <StyledContentContainer>Hello</StyledContentContainer>
-    </main>
+    </StyledMain>
   );
 };
+
 export default Main;

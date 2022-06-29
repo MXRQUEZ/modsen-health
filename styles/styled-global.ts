@@ -5,6 +5,8 @@ export const StyledAppWrapper = styled.div`
   background-color: #ebf1ff;
   overflow: hidden;
   position: relative;
+  display: flex;
+  flex-direction: column;
 `;
 
 export const StyledContentContainer = styled.div`
