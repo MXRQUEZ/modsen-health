@@ -4,6 +4,7 @@ export const StyledAppWrapper = styled.div`
   min-height: 100vh;
   background-color: #ebf1ff;
   overflow: hidden;
+  position: relative;
 `;
 
 export const StyledContentContainer = styled.div`
@@ -20,15 +21,11 @@ export const StyledContentContainer = styled.div`
   }
 
   @media only screen and (max-width: 991.98px) {
-    max-width: 750px;
-  }
-
-  @media only screen and (max-width: 767.98px) {
     max-width: none;
   }
 `;
 
-export const GlobalStyle = createGlobalStyle`
+export const GlobalStyles = createGlobalStyle`
   *,
   *::after,
   *::before {
@@ -80,7 +77,6 @@ export const GlobalStyle = createGlobalStyle`
   html,
   body {
     width: 100%;
-    height: 100%;
     line-height: 1;
     font-size: 16px;
     color: #333333;

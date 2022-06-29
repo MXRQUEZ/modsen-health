@@ -5,6 +5,19 @@ export const StyledHeaderNavbar = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 100px;
+
+  @media only screen and (max-width: 1250px) {
+    gap: 10px;
+  }
+
+  @media only screen and (max-width: 991.98px) {
+    gap: 50px;
+  }
+
+  @media only screen and (max-width: 479.98px) {
+    gap: 20px;
+  }
 
   @media only screen and (max-width: 767.98px) {
     #pagesbar,
@@ -19,15 +32,6 @@ export const StyledNavbarMenu = styled.ul`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 100px;
-
-  @media only screen and (max-width: 1250px) {
-    padding-left: 10px;
-  }
-
-  @media only screen and (max-width: 991.98px) {
-    padding-left: 40px;
-  }
 
   & li {
     text-align: center;
@@ -43,10 +47,6 @@ export const StyledNavbarMenu = styled.ul`
 
     @media only screen and (max-width: 991.98px) {
       margin-right: 20px;
-    }
-
-    @media only screen and (max-width: 767.98px) {
-      margin-right: 50px;
     }
 
     & .notification_bell {

@@ -31,7 +31,7 @@ export const StyledHeaderTitleWrapper = styled.div`
   }
 
   @media only screen and (max-width: 991.98px) {
-    margin-right: 10px;
+    margin-right: 20px;
   }
 `;
 
