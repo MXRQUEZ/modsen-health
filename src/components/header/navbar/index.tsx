@@ -23,7 +23,7 @@ const Navbar: FC = () => {
           <i className="fa-regular fa-bell fa-lg notification_bell" role="presentation" />
         </StyledMenuItem>
       </StyledNavbarMenu>
-      <StyledBurgerMenu aria-label="burger menu">
+      <StyledBurgerMenu aria-label="burger menu" aria-details="opens up navigation menu" aria-haspopup>
         <span />
       </StyledBurgerMenu>
     </StyledHeaderNavbar>
