@@ -57,6 +57,10 @@ export const StyledInputWrapper = styled.div`
   font-family: "Roboto", sans-serif;
   font-weight: 400;
 
+  @media only screen and (max-width: 991.98px) {
+    margin-bottom: 40px;
+  }
+
   & i {
     position: absolute;
     align-self: center;
@@ -75,7 +79,8 @@ export const StyledInputWrapper = styled.div`
 `;
 
 export const StyledNumbersSection = styled.section`
-  margin-top: 100px;
+  position: relative;
+  margin-top: 20%;
 
   & > ul {
     color: #333333;
@@ -111,13 +116,29 @@ export const StyledNumbersDescription = styled.p`
 export const StyledMainArticle = styled.article`
   margin-top: 35px;
   display: flex;
+  height: 100%;
   flex: 1 1 40%;
   flex-direction: column;
   align-items: left;
   justify-content: center;
+
+  @media only screen and (max-width: 1250px) {
+    position: absolute;
+    z-index: 10;
+  }
+
+  @media only screen and (max-width: 991.98px) {
+    position: relative;
+    margin-top: 100px;
+  }
+
+  @media only screen and (max-width: 767.98px) {
+    margin-top: 50px;
+  }
 `;
 
 export const StyledMainContainer = styled.div`
+  position: relative;
   display: flex;
 
   @media only screen and (max-width: 991.98px) {
@@ -129,16 +150,22 @@ export const StyledColumn = styled.div`
   position: relative;
   display: flex;
   justify-content: right;
-  height: 100%;
+  min-height: 100%;
   flex: 1 1 60%;
+
+  @media only screen and (max-width: 1250px) {
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 export const StyledSwearingPicture = styled.picture`
   position: absolute;
   height: 100%;
   width: 100%;
-  left: 350px;
+  left: 35%;
   top: 20px;
+  z-index: 0;
 
   & source,
   & img {
@@ -147,8 +174,11 @@ export const StyledSwearingPicture = styled.picture`
     max-height: 190px;
   }
 
-  @media only screen and (max-width: 991.98px) {
+  @media only screen and (max-width: 1250px) {
     left: 250px;
+  }
+
+  @media only screen and (max-width: 991.98px) {
     margin-bottom: 40px;
   }
 
@@ -161,8 +191,9 @@ export const StyledBgPicture = styled.picture`
   position: absolute;
   height: 100%;
   width: 100%;
-  left: 150px;
+  left: 15%;
   top: 180px;
+  z-index: 0;
 
   & source,
   & img {
@@ -171,7 +202,7 @@ export const StyledBgPicture = styled.picture`
     max-height: 800px;
   }
 
-  @media only screen and (max-width: 991.98px) {
+  @media only screen and (max-width: 1250px) {
     left: 0;
   }
 
