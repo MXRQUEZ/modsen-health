@@ -9,6 +9,7 @@
       "@/*": ["src/*"],
       "@images/*": ["src/assets/images/*"],
       "@fonts/*": ["src/assets/fonts/*"],
+      "@styles/*": ["src/styles/*"],
       "@animations/*": ["src/animations/*"],
       "@components/*": ["src/components/*"],
       "@services/*": ["src/services/*"],

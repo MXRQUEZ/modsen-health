@@ -1,7 +1,7 @@
 import { FC } from "react";
-import { GlobalStyles, StyledAppWrapper } from "styles/styled-global";
-import Header from "./components/header/navbar";
+import Header from "./components/header";
 import Main from "./components/main";
+import { GlobalStyles, StyledAppWrapper } from "./styles/styled-global";
 
 const App: FC = () => {
   return (

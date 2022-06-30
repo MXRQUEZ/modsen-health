@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledPrimaryButton = styled.button`
+export const StyledButton = styled.button`
   color: white;
   height: fit-content;
   background-color: #215ee9;
