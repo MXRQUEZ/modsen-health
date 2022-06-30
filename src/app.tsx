@@ -1,6 +1,6 @@
 import { FC } from "react";
 import Header from "./components/header";
-import Main from "./components/main";
+import Home from "./components/home";
 import GlobalStyles from "./styles/styled-global";
 import { StyledAppWrapper } from "./styles/styled-app";
 import BackgroundArcs from "./components/background-arcs";
@@ -12,7 +12,7 @@ const App: FC = () => {
       <StyledAppWrapper>
         <BackgroundArcs />
         <Header />
-        <Main />
+        <Home />
       </StyledAppWrapper>
     </>
   );

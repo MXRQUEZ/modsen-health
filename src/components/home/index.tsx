@@ -13,15 +13,17 @@ import achievements from "./constants/achievements";
 import EmailInput from "./email-input";
 import { StyledContentContainer } from "@/styles/styled-app";
 
-const Main: FC = () => {
+const Home: FC = () => {
   return (
     <StyledMain>
       <StyledContentContainer>
         <StyledMainContainer>
           <StyledMainArticle>
-            <StyledArticleIdea aria-label="main idea">Booking of doctor’s appointment</StyledArticleIdea>
-            <StyledMainProposal aria-label="main proposal">Don’t Miss Our Exclusive Patient Special</StyledMainProposal>
-            <StyledArticleDescription aria-label="proposal description">
+            <StyledArticleIdea>Booking of doctor’s appointment</StyledArticleIdea>
+            <StyledMainProposal id="proposal" aria-labelledby="proposal-description">
+              Don’t Miss Our Exclusive Patient Special
+            </StyledMainProposal>
+            <StyledArticleDescription id="proposal-description">
               We want to make sure that everyone has access to natural and effective care. With our special, you’ll
               receive a consultation and a digital posture assesment.
             </StyledArticleDescription>
@@ -35,4 +37,4 @@ const Main: FC = () => {
   );
 };
 
-export default Main;
+export default Home;
