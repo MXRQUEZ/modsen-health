@@ -11,7 +11,7 @@ export const StyledParagraph = styled.p`
   line-height: calc(24 / 14 * 100%);
 `;
 
-export const StyledAdvertisment = styled.h1`
+export const StyledMainAdvertisment = styled.h1`
   color: #215ee9;
   font-size: 65px;
   line-height: 101.8%;
@@ -56,6 +56,7 @@ export const StyledInputWrapper = styled.div`
   width: 100%;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
+  z-index: 10;
 
   @media only screen and (max-width: 991.98px) {
     margin-bottom: 40px;
@@ -81,16 +82,17 @@ export const StyledInputWrapper = styled.div`
 export const StyledNumbersSection = styled.section`
   position: relative;
   margin-top: 20%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 60px;
 
-  & > ul {
+  & > div {
     color: #333333;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 60px;
+    text-align: center;
   }
 
-  .numbers__list li:nth-child(even) {
+  & > div:nth-child(even) > h3 {
     color: #215ee9;
   }
 

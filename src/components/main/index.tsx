@@ -1,15 +1,15 @@
 import { FC } from "react";
 import heroWebp from "@images/hero.webp";
 import heroPng from "@images/hero.png";
-import whiteNWebp from "@images/white-n.webp";
-import whiteNPng from "@images/white-n.png";
-import whiteSwearingWebp from "@images/white-swearing.webp";
-import whiteSwearingPng from "@images/white-swearing.png";
+import whiteBigWebp from "@images/white-n.webp";
+import whiteBigPng from "@images/white-n.png";
+import whiteSmallWebp from "@images/white-swearing.webp";
+import whiteSmallPng from "@images/white-swearing.png";
 import { StyledButton } from "@/styles/styled-button";
 import {
-  StyledAdvertisment,
+  StyledMainAdvertisment,
   StyledMainContainer,
-  StyledColumn,
+  StyledColumn as StyledImagesBlock,
   StyledDescription,
   StyledEmailInput,
   StyledInputWrapper,
@@ -20,16 +20,24 @@ import {
   StyledNumbers,
   StyledNumbersDescription,
   StyledHeroPicture,
-  StyledBgPicture,
-  StyledSwearingPicture,
+  StyledBgPicture as StyledBigBgPicture,
+  StyledSwearingPicture as StyledSmallBgPicture,
 } from "./styled";
 import { StyledContentContainer } from "@/styles/styled-global";
 
-const numbers = ["240", "1M+", "145"];
-const descriptions = [
-  "Qualified Doctors & Medical Specialists",
-  "Medical Tests Done For Our Patients",
-  "Years of Experience The Medical Field",
+const mainNumbers = [
+  {
+    title: "240",
+    description: "Qualified Doctors & Medical Specialists",
+  },
+  {
+    title: "1M+",
+    description: "Medical Tests Done For Our Patients",
+  },
+  {
+    title: "145",
+    description: "Years of Experience The Medical Field",
+  },
 ];
 
 const Main: FC = () => {
@@ -39,7 +47,7 @@ const Main: FC = () => {
         <StyledMainContainer>
           <StyledMainArticle>
             <StyledParagraph>Booking of doctor’s appointment</StyledParagraph>
-            <StyledAdvertisment>Don’t Miss Our Exclusive Patient Special</StyledAdvertisment>
+            <StyledMainAdvertisment>Don’t Miss Our Exclusive Patient Special</StyledMainAdvertisment>
             <StyledDescription>
               We want to make sure that everyone has access to natural and effective care. With our special, you’ll
               receive a consultation and a digital posture assesment.
@@ -50,36 +58,28 @@ const Main: FC = () => {
               <StyledButton>Get Started</StyledButton>
             </StyledInputWrapper>
             <StyledNumbersSection>
-              <ul className="numbers__list">
-                {numbers.map((number) => (
-                  <li key={number}>
-                    <StyledNumbers>{number}</StyledNumbers>
-                  </li>
-                ))}
-              </ul>
-              <ul>
-                {descriptions.map((description) => (
-                  <li key={description}>
-                    <StyledNumbersDescription>{description}</StyledNumbersDescription>
-                  </li>
-                ))}
-              </ul>
+              {mainNumbers.map(({ title, description }) => (
+                <div key={`${title}-${description}`}>
+                  <StyledNumbers>{title}</StyledNumbers>
+                  <StyledNumbersDescription>{description}</StyledNumbersDescription>
+                </div>
+              ))}
             </StyledNumbersSection>
           </StyledMainArticle>
-          <StyledColumn>
+          <StyledImagesBlock>
             <StyledHeroPicture role="presentation">
               <source srcSet={heroWebp} type="images/webp" />
-              <img src={heroPng} alt="A man with a hurting spine" />
+              <img src={heroPng} alt="A man with a hurting spine" role="presentation" />
             </StyledHeroPicture>
-            <StyledBgPicture role="presentation">
-              <source srcSet={whiteNWebp} type="images/webp" />
-              <img src={whiteNPng} alt="background" />
-            </StyledBgPicture>
-            <StyledSwearingPicture role="presentation">
-              <source srcSet={whiteSwearingWebp} type="images/webp" />
-              <img src={whiteSwearingPng} alt="background" />
-            </StyledSwearingPicture>
-          </StyledColumn>
+            <StyledBigBgPicture role="presentation">
+              <source srcSet={whiteBigWebp} type="images/webp" />
+              <img src={whiteBigPng} alt="background" role="presentation" />
+            </StyledBigBgPicture>
+            <StyledSmallBgPicture role="presentation">
+              <source srcSet={whiteSmallWebp} type="images/webp" />
+              <img src={whiteSmallPng} alt="background" role="presentation" />
+            </StyledSmallBgPicture>
+          </StyledImagesBlock>
         </StyledMainContainer>
       </StyledContentContainer>
     </StyledMain>

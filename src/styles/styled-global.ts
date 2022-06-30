@@ -27,6 +27,55 @@ export const StyledContentContainer = styled.div`
   }
 `;
 
+export const StyledBgImagesWrapper = styled.div`
+  position: fixed;
+
+  @media only screen and (max-width: 1250px) {
+    display: none;
+  }
+
+  & > img {
+    position: absolute;
+    opacity: 0.3;
+  }
+
+  & .arc1 {
+    left: -160px;
+    top: 750px;
+  }
+
+  & .arc2 {
+    left: -140px;
+    top: 600px;
+  }
+
+  & .arc3 {
+    left: -120px;
+    top: 500px;
+    transform: rotate(15deg);
+  }
+
+  & .arc4 {
+    left: 60px;
+    top: 600px;
+    transform: rotate(15deg);
+  }
+
+  & .arc5 {
+    left: 60px;
+    top: 550px;
+    display: none;
+    transform: rotate(-15deg);
+  }
+
+  & .arc6 {
+    left: -80px;
+    top: 300px;
+    display: none;
+    transform: rotate(5deg);
+  }
+`;
+
 export const GlobalStyles = createGlobalStyle`
   *,
   *::after,
