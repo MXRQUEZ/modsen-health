@@ -150,6 +150,7 @@ export const StyledColumn = styled.div`
   position: relative;
   display: flex;
   justify-content: right;
+  align-items: flex-end;
   min-height: 100%;
   flex: 1 1 60%;
 
@@ -215,7 +216,6 @@ export const StyledBgPicture = styled.picture`
 export const StyledHeroPicture = styled.picture`
   position: relative;
   z-index: 5;
-  top: 0;
 
   & source,
   & img {
