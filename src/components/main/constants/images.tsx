@@ -12,17 +12,20 @@ export const backgroundImages = [
     webp: heroWebp,
     png: heroPng,
     styled: <StyledHeroPicture />,
+    alt: "A man with a hurting spine",
   },
   {
     id: "whiteBigImage",
     webp: whiteBigWebp,
     png: whiteBigPng,
     styled: <StyledBigBgPicture />,
+    alt: "White background image",
   },
   {
-    id: "whiteSmallImage",
+    id: "whiteBigImage",
     webp: whiteSmallWebp,
     png: whiteSmallPng,
     styled: <StyledSmallBgPicture />,
+    alt: "White background image",
   },
 ];
