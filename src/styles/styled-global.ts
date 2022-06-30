@@ -1,82 +1,6 @@
-import styled, { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from "styled-components";
 
-export const StyledAppWrapper = styled.div`
-  min-height: 100vh;
-  background-color: #ebf1ff;
-  overflow: hidden;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-`;
-
-export const StyledContentContainer = styled.div`
-  max-width: 1400px;
-  margin: 0 auto;
-
-  @media only screen and (max-width: 1500px) {
-    max-width: 1100px;
-  }
-
-  @media only screen and (max-width: 1250px) {
-    max-width: 900px;
-    padding: 0 20px;
-  }
-
-  @media only screen and (max-width: 991.98px) {
-    max-width: none;
-  }
-`;
-
-export const StyledBgImagesWrapper = styled.div`
-  position: fixed;
-
-  @media only screen and (max-width: 1250px) {
-    display: none;
-  }
-
-  & > img {
-    position: absolute;
-    opacity: 0.3;
-  }
-
-  & .arc1 {
-    left: -160px;
-    top: 750px;
-  }
-
-  & .arc2 {
-    left: -140px;
-    top: 600px;
-  }
-
-  & .arc3 {
-    left: -120px;
-    top: 500px;
-    transform: rotate(15deg);
-  }
-
-  & .arc4 {
-    left: 60px;
-    top: 600px;
-    transform: rotate(15deg);
-  }
-
-  & .arc5 {
-    left: 60px;
-    top: 550px;
-    display: none;
-    transform: rotate(-15deg);
-  }
-
-  & .arc6 {
-    left: -80px;
-    top: 300px;
-    display: none;
-    transform: rotate(5deg);
-  }
-`;
-
-export const GlobalStyles = createGlobalStyle`
+const GlobalStyles = createGlobalStyle`
   *,
   *::after,
   *::before {
@@ -169,3 +93,5 @@ export const GlobalStyles = createGlobalStyle`
     outline: none;
   }
 `;
+
+export default GlobalStyles;
