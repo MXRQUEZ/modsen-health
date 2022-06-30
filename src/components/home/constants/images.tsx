@@ -22,7 +22,7 @@ export const backgroundImages = [
     alt: "White background image",
   },
   {
-    id: "whiteBigImage",
+    id: "whiteSmallImage",
     webp: whiteSmallWebp,
     png: whiteSmallPng,
     styled: <StyledSmallBgPicture />,
