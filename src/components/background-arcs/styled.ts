@@ -46,4 +46,39 @@ export const StyledBgImagesWrapper = styled.div`
     top: 550px;
     transform: rotate(-5deg);
   }
+
+  & .top__arc1 {
+    right: -100px;
+    top: -100px;
+    transform: rotate(180deg);
+  }
+
+  & .top__arc2 {
+    right: 10px;
+    top: 0;
+    transform: rotate(180deg);
+  }
+
+  & .top__arc3 {
+    right: 100px;
+    top: 20px;
+    transform: rotate(180deg);
+  }
+
+  & .top__arc4 {
+    right: 250px;
+    top: 10px;
+    transform: rotate(175deg);
+  }
+
+  & .top__arc5 {
+    right: 370px;
+    transform: rotate(175deg);
+  }
+
+  & .top__arc6 {
+    right: 480px;
+    top: 5px;
+    transform: rotate(175deg);
+  }
 `;
