@@ -121,7 +121,7 @@ export const StyledMainContainer = styled.div`
   display: flex;
 
   @media only screen and (max-width: 991.98px) {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 `;
 
@@ -182,10 +182,9 @@ export const StyledBgPicture = styled.picture`
 `;
 
 export const StyledHeroPicture = styled.picture`
-  position: absolute;
+  position: relative;
   z-index: 5;
   top: 0;
-  right: 0;
 
   & source,
   & img {

@@ -7,10 +7,6 @@ export const StyledAppWrapper = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-
-  @media only screen and (max-width: 991.98px) {
-    overflow-y: visible;
-  }
 `;
 
 export const StyledContentContainer = styled.div`
