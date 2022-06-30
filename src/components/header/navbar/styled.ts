@@ -1,17 +1,18 @@
-import { bellshake } from "animations/bellshake";
 import styled from "styled-components";
+import { bellshake } from "@/animations/bellshake";
 
 export const StyledHeaderNavbar = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 100px;
 
-  @media only screen and (max-width: 767.98px) {
-    #pagesbar,
-    #authbar_login,
-    #authbar_register {
-      display: none;
-    }
+  @media only screen and (max-width: 1250px) {
+    gap: 10px;
+  }
+
+  @media only screen and (max-width: 991.98px) {
+    gap: 50px;
   }
 `;
 
@@ -20,24 +21,24 @@ export const StyledNavbarMenu = styled.ul`
   justify-content: center;
   align-items: center;
 
+  @media only screen and (max-width: 767.98px) {
+    display: none;
+  }
+
   & li {
     text-align: center;
     white-space: nowrap;
-    line-height: calc(19 / 14 * 100%);
+    line-height: calc(19 / 16 * 100%);
     position: relative;
     margin-right: 45px;
     cursor: pointer;
 
-    @media only screen and (max-width: 1200px) {
-      margin-right: 40px;
-    }
-
-    @media only screen and (max-width: 991.98px) {
+    @media only screen and (max-width: 1250px) {
       margin-right: 30px;
     }
 
-    @media only screen and (max-width: 767.98px) {
-      margin-rigth: 25px;
+    @media only screen and (max-width: 991.98px) {
+      margin-right: 20px;
     }
 
     & .notification_bell {
@@ -45,25 +46,12 @@ export const StyledNavbarMenu = styled.ul`
 
       &:hover,
       &:focus {
-        animation: ${bellshake} 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+        animation: ${bellshake} 0.7s cubic-bezier(0.36, 0.07, 0.19, 0.97) infinite;
         backface-visibility: hidden;
         transform-origin: top right;
         filter: brightness(120%);
       }
     }
-  }
-`;
-
-export const StyledRegisterButton = styled.button`
-  color: white;
-  background-color: #215ee9;
-  border-radius: 40px;
-  padding: 15px 30px;
-  transition: filter 0.3s ease-in 0s;
-
-  &:hover,
-  &:focus {
-    filter: brightness(120%);
   }
 `;
 
@@ -93,22 +81,24 @@ export const StyledBurgerMenu = styled.button`
   @media only screen and (max-width: 767.98px) {
     display: flex;
     flex-direction: column;
+    background-color: white;
     justify-content: space-between;
     position: relative;
     height: 18px;
-    margin-right: 20px;
 
     & span {
-      height: 2px;
-      width: 30px;
+      height: 3px;
+      border-radius: 30%;
+      width: 35px;
       background-color: black;
     }
 
     &::before,
     &::after {
       content: "";
-      height: 2px;
-      width: 30px;
+      height: 3px;
+      width: 35px;
+      border-radius: 30%;
       background-color: black;
     }
   }
@@ -132,7 +122,7 @@ export const StyledCounter = styled.span`
   z-index: 3;
 
   &:hover ~ i {
-    animation: ${bellshake} 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+    animation: ${bellshake} 0.7s cubic-bezier(0.36, 0.07, 0.19, 0.97) infinite;
     backface-visibility: hidden;
     transform-origin: top right;
     filter: brightness(120%);

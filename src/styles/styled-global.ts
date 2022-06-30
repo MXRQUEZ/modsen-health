@@ -1,38 +1,6 @@
-import styled, { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from "styled-components";
 
-export const StyledAppWrapper = styled.div`
-  min-height: 100vh;
-  background-color: #ebf1ff;
-  overflow: hidden;
-`;
-
-export const StyledContentContainer = styled.div`
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 20px;
-
-  @media only screen and (max-width: 1500px) {
-    max-width: 1100px;
-  }
-
-  @media only screen and (max-width: 1200px) {
-    max-width: 900px;
-  }
-
-  @media only screen and (max-width: 1000px) {
-    max-width: 800px;
-  }
-
-  @media only screen and (max-width: 991.98px) {
-    max-width: 750px;
-  }
-
-  @media only screen and (max-width: 767.98px) {
-    max-width: none;
-  }
-`;
-
-export const GlobalStyle = createGlobalStyle`
+const GlobalStyles = createGlobalStyle`
   *,
   *::after,
   *::before {
@@ -84,7 +52,6 @@ export const GlobalStyle = createGlobalStyle`
   html,
   body {
     width: 100%;
-    height: 100%;
     line-height: 1;
     font-size: 16px;
     color: #333333;
@@ -110,6 +77,12 @@ export const GlobalStyle = createGlobalStyle`
     display: none;
   }
 
+  input:focus,
+  input:hover {
+    border: none;
+    outline: none;
+  }
+
   button::-moz-focus-inner {
     padding: 0;
     border: 0;
@@ -120,3 +93,5 @@ export const GlobalStyle = createGlobalStyle`
     outline: none;
   }
 `;
+
+export default GlobalStyles;

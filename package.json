@@ -10,6 +10,8 @@
   "author": "Sergey Svistun",
   "license": "MIT",
   "dependencies": {
+    "@mui/material": "^5.8.6",
+    "@mui/styled-engine-sc": "^5.8.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-router-dom": "^6.3.0",
