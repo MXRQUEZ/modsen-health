@@ -18,6 +18,14 @@ export const StyledHeaderContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   min-height: 85px;
+
+  @media only screen and (max-width: 767.98px) {
+    min-height: 75px;
+  }
+
+  @media only screen and (max-width: 479.98px) {
+    min-height: 65px;
+  }
 `;
 
 export const StyledHeaderTitleWrapper = styled.div`
@@ -25,6 +33,8 @@ export const StyledHeaderTitleWrapper = styled.div`
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  position: relative;
+  z-index: 15;
 
   &:hover,
   &:focus {
@@ -41,6 +51,7 @@ export const StyledHeaderTitleWrapper = styled.div`
 `;
 
 export const StyledHeaderTitle = styled.span`
+  color: #333333;
   white-space: nowrap;
   margin-left: 10px;
 

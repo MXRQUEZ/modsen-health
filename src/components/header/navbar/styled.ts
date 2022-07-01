@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { bellshake } from "@/animations/bellshake";
+import bellshake from "@/animations/bellshake";
 
 export const StyledHeaderNavbar = styled.nav`
   display: flex;
@@ -41,7 +41,7 @@ export const StyledNavbarMenu = styled.ul`
       margin-right: 20px;
     }
 
-    & .notification_bell {
+    & .notification-bell {
       position: relative;
 
       &:hover,
@@ -71,33 +71,6 @@ export const StyledMenuItem = styled.li`
       height: 7px;
       border-radius: 100%;
       left: calc(50% - 3px);
-    }
-  }
-`;
-
-export const StyledBurgerMenu = styled.button`
-  display: none;
-
-  @media only screen and (max-width: 767.98px) {
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    justify-content: space-between;
-    position: relative;
-    height: 18px;
-
-    & span {
-      height: 3px;
-      width: 35px;
-      background-color: black;
-    }
-
-    &::before,
-    &::after {
-      content: "";
-      height: 3px;
-      width: 35px;
-      background-color: black;
     }
   }
 `;

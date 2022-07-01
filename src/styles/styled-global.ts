@@ -14,11 +14,10 @@ const GlobalStyles = createGlobalStyle`
 
   a,
   a:visited,
-  a:hover {
+  a:hover,
+  a:focus, 
+  a:active {
     text-decoration: none;
-  }
-
-  a:focus, a:active{
     outline: none;
   }
 

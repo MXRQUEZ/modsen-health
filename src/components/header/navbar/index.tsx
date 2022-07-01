@@ -1,11 +1,12 @@
 import { FC } from "react";
 import { StyledButton } from "@/styles/styled-button";
-import { StyledHeaderNavbar, StyledNavbarMenu, StyledMenuItem, StyledCounter, StyledBurgerMenu } from "./styled";
+import { StyledHeaderNavbar, StyledNavbarMenu, StyledMenuItem, StyledCounter } from "./styled";
 import { pages } from "@/components/constants/pages";
+import BurgerMenu from "./burger-menu";
 
 const Navbar: FC = () => {
   return (
-    <StyledHeaderNavbar aria-label="navigation menu">
+    <StyledHeaderNavbar>
       <StyledNavbarMenu aria-label="pages menu">
         {pages.map(({ name }) => (
           <StyledMenuItem key={name} aria-label={`${name} page`}>
@@ -20,12 +21,10 @@ const Navbar: FC = () => {
         </li>
         <StyledMenuItem aria-label="notifications">
           <StyledCounter aria-label="notification count">2</StyledCounter>
-          <i className="fa-regular fa-bell fa-lg notification_bell" role="presentation" />
+          <i className="fa-regular fa-bell fa-lg notification-bell" role="presentation" />
         </StyledMenuItem>
       </StyledNavbarMenu>
-      <StyledBurgerMenu aria-label="burger menu" aria-details="opens up navigation menu" aria-haspopup>
-        <span />
-      </StyledBurgerMenu>
+      <BurgerMenu />
     </StyledHeaderNavbar>
   );
 };
