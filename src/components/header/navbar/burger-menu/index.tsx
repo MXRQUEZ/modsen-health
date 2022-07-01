@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { pages } from "@/components/constants/pages";
 import { StyledBurger, StyledBurgerMenuContainer, StyledBurgerNav, StyledMenuItem, StyledMenuTrigger } from "./styled";
+import StyledButton from "@/styles/styled-button";
 
 const BurgerMenu: FC = () => {
   return (
@@ -9,7 +10,7 @@ const BurgerMenu: FC = () => {
       <StyledMenuTrigger htmlFor="menu-toggle" aria-label="toggle burger menu" />
       <StyledBurger role="presentation" />
       <StyledBurgerNav>
-        <ul className="burger-menu" aria-label="pages menu">
+        <ul className="burger-menu pages" aria-label="pages menu">
           {pages.map(({ name, path, icon }) => (
             <StyledMenuItem key={name}>
               <a href={path}>
@@ -18,6 +19,18 @@ const BurgerMenu: FC = () => {
               </a>
             </StyledMenuItem>
           ))}
+        </ul>
+        <ul className="burger-menu auth" aria-label="authorization menu">
+          <li>
+            <StyledButton variant="secondary" fontSize="16px" shadowed upperCased>
+              Log in
+            </StyledButton>
+          </li>
+          <li>
+            <StyledButton variant="secondary" fontSize="16px" filled shadowed upperCased>
+              Register
+            </StyledButton>
+          </li>
         </ul>
       </StyledBurgerNav>
     </StyledBurgerMenuContainer>

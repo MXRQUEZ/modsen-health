@@ -40,40 +40,66 @@ export const StyledBurgerNav = styled.nav`
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
   animation: ${menuNotChecked} 0.3s ease both;
   border-top: 1px solid #333333;
+  visibility: hidden;
 
   @media only screen and (max-width: 479.98px) {
     top: 65px;
   }
 
   & .burger-menu {
-    margin: 45px 0 30px 0;
     display: none;
+    flex-direction: column;
+  }
+
+  & .auth {
+    margin-top: 20px;
+    flex-direction: row;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    & li {
+      flex: 0 1 25%;
+
+      & button {
+        width: 100%;
+      }
+    }
   }
 `;
 
 export const StyledMenuItem = styled.li`
   position: relative;
-  text-align: center;
   z-index: 10;
-  margin-top: 10px;
   font-weight: 700;
   line-height: 1.8;
   width: 100%;
+  border-bottom: 1px solid #333;
 
   & a {
-    display: inline-block;
-    color: #215ee9;
-    padding: 20px 60px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    color: #333;
+    padding: 20px 0;
+    letter-spacing: 1px;
 
     &:focus {
-      display: block;
+      color: #215ee9;
       background-color: #ebf1ff;
       filter: brightness(120%);
       transition: all 0.5s ease-in-out;
     }
 
     & i {
-      margin-right: 10px;
+      width: 10%;
+      margin-right: 20px;
+      justify-self: center;
+      align-self: center;
+      border-right: 1px solid #333;
+      margin-left: 20px;
+      padding: 20px 10px;
     }
   }
 `;
@@ -88,45 +114,49 @@ export const StyledBurgerMenuContainer = styled.div`
     position: relative;
     height: 25px;
 
-    & #menu-toggle + label,
-    & #menu-toggle + label + span {
-      top: 0;
-      right: 0;
-    }
+    & #menu-toggle {
+      &[type="checkbox"]:not(:checked),
+      &[type="checkbox"]:checked {
+        display: none;
+      }
 
-    & #menu-toggle:checked + label + span {
-      top: 10px;
-      transform: rotate(360deg);
-      transition: transform 0.3s ease;
-    }
+      & + label,
+      & + label + span {
+        top: 0;
+        right: 0;
+      }
 
-    & #menu-toggle:checked + label + span::before {
-      width: 20px;
-      top: -2px;
-      left: 18px;
-      transform: rotate(45deg) translateX(-5px);
-      transition: transform 0.3s ease;
-    }
+      &:checked + label {
+        & + span {
+          top: 10px;
+          transform: rotate(360deg);
+          transition: transform 0.3s ease;
 
-    & #menu-toggle:checked + label + span::after {
-      width: 20px;
-      top: 2px;
-      left: 18px;
-      transform: rotate(-45deg) translateX(-5px);
-      transition: transform 0.3s ease;
-    }
+          & + nav {
+            animation: ${menuChecked} 0.5s ease both;
 
-    & #menu-toggle:checked + label + span + nav > ul {
-      display: block;
-    }
+            & > ul {
+              display: flex;
+            }
+          }
+        }
 
-    & #menu-toggle:checked + label + span + nav {
-      animation: ${menuChecked} 0.5s ease both;
-    }
+        & + span::before {
+          width: 20px;
+          top: -2px;
+          left: 18px;
+          transform: rotate(45deg) translateX(-5px);
+          transition: transform 0.3s ease;
+        }
 
-    & #menu-toggle[type="checkbox"]:not(:checked),
-    & #menu-toggle[type="checkbox"]:checked {
-      display: none;
+        & + span::after {
+          width: 20px;
+          top: 2px;
+          left: 18px;
+          transform: rotate(-45deg) translateX(-5px);
+          transition: transform 0.3s ease;
+        }
+      }
     }
   }
 `;

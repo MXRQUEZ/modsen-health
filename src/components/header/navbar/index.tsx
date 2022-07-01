@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { StyledButton } from "@/styles/styled-button";
+import StyledButton from "@/styles/styled-button";
 import { StyledHeaderNavbar, StyledNavbarMenu, StyledMenuItem, StyledCounter } from "./styled";
 import { pages } from "@/components/constants/pages";
 import BurgerMenu from "./burger-menu";
@@ -14,7 +14,7 @@ const Navbar: FC = () => {
           </StyledMenuItem>
         ))}
       </StyledNavbarMenu>
-      <StyledNavbarMenu aria-label="authentication menu">
+      <StyledNavbarMenu aria-label="authorization menu">
         <StyledMenuItem aria-label="log in">Log In</StyledMenuItem>
         <li aria-label="register">
           <StyledButton aria-label="registration button">Register</StyledButton>

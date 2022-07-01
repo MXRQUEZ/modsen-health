@@ -2,7 +2,7 @@ import { keyframes } from "styled-components";
 
 export const menuChecked = keyframes`
   0% {
-    visibility: visible;
+    visibility: hidden;
     width: 0;
     height: 0;
     border-top-left-radius: 15%;
@@ -13,11 +13,13 @@ export const menuChecked = keyframes`
     width: 100vw;
     height: 100vh;
     border-radius: 0;
+    visibility: visible;
   }
 `;
 
 export const menuNotChecked = keyframes`
   0% {
+    visibility: visible;
     width: 100vw;
     height: 100vh;
     border-top-left-radius: 15%;
