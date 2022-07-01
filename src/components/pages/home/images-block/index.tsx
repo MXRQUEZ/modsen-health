@@ -1,5 +1,4 @@
 import { FC, cloneElement } from "react";
-
 import { backgroundImages } from "../constants/images";
 import { StyledImagesBlock } from "./styled";
 

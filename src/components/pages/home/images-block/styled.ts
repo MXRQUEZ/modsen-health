@@ -8,6 +8,13 @@ export const StyledImagesBlock = styled.div`
   min-height: 100%;
   flex: 1 1 60%;
 
+  & picture,
+  source,
+  img {
+    pointer-events: none;
+    user-select: none;
+  }
+
   @media only screen and (max-width: 1250px) {
     justify-content: center;
     align-items: center;

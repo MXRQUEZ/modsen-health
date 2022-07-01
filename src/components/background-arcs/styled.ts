@@ -11,72 +11,74 @@ export const StyledBgImagesWrapper = styled.div`
 
   & > img {
     position: absolute;
+    pointer-events: none;
+    user-select: none;
     opacity: 0.3;
   }
 
-  & .bottom__arc1 {
+  & .bottom-arc1 {
     left: -170px;
     top: 800px;
     transform: rotate(10deg);
   }
 
-  & .bottom__arc2 {
+  & .bottom-arc2 {
     left: -160px;
     top: 700px;
   }
 
-  & .bottom__arc3 {
+  & .bottom-arc3 {
     left: -120px;
     top: 600px;
   }
 
-  & .bottom__arc4 {
+  & .bottom-arc4 {
     left: 10px;
     top: 575px;
   }
 
-  & .bottom__arc5 {
+  & .bottom-arc5 {
     left: 150px;
     top: 550px;
     transform: rotate(-5deg);
   }
 
-  & .bottom__arc6 {
+  & .bottom-arc6 {
     left: 300px;
     top: 550px;
     transform: rotate(-5deg);
   }
 
-  & .top__arc1 {
+  & .top-arc1 {
     right: -100px;
     top: -100px;
     transform: rotate(180deg);
   }
 
-  & .top__arc2 {
+  & .top-arc2 {
     right: 10px;
     top: 0;
     transform: rotate(180deg);
   }
 
-  & .top__arc3 {
+  & .top-arc3 {
     right: 100px;
     top: 20px;
     transform: rotate(180deg);
   }
 
-  & .top__arc4 {
+  & .top-arc4 {
     right: 250px;
     top: 10px;
     transform: rotate(175deg);
   }
 
-  & .top__arc5 {
+  & .top-arc5 {
     right: 370px;
     transform: rotate(175deg);
   }
 
-  & .top__arc6 {
+  & .top-arc6 {
     right: 480px;
     top: 5px;
     transform: rotate(175deg);
