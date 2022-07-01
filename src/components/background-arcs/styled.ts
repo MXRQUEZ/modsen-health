@@ -11,6 +11,8 @@ export const StyledBgImagesWrapper = styled.div`
 
   & > img {
     position: absolute;
+    pointer-events: none;
+    user-select: none;
     opacity: 0.3;
   }
 

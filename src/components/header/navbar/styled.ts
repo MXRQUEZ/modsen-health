@@ -88,7 +88,6 @@ export const StyledBurgerMenu = styled.button`
 
     & span {
       height: 3px;
-      border-radius: 30%;
       width: 35px;
       background-color: black;
     }
@@ -98,7 +97,6 @@ export const StyledBurgerMenu = styled.button`
       content: "";
       height: 3px;
       width: 35px;
-      border-radius: 30%;
       background-color: black;
     }
   }
@@ -115,6 +113,7 @@ export const StyledCounter = styled.span`
   display: flex;
   align-items: center;
   justify-content: center;
+  user-select: none;
 
   position: absolute;
   top: -8px;
