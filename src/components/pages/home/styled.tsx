@@ -60,4 +60,8 @@ export const StyledArticleDescription = styled.p`
   opacity: 0.7;
   margin-top: 30px;
   margin-bottom: 50px;
+
+  @media only screen and (max-width: 767.98px) {
+    opacity: 1;
+  }
 `;

@@ -12,6 +12,7 @@ const StyledButton = styled.button<StyledButtonProps>`
   font-size: ${(props) => props.fontSize};
   text-transform: ${(props) => props.upperCased && "uppercase"};
   letter-spacing: ${(props) => props.upperCased && "1px"};
+  white-space: nowrap;
   color: ${({ variant, filled }) => (variant === "primary" || filled ? "white" : "#333333")};
   height: fit-content;
   background-color: ${({ variant, filled }) => (variant === "primary" || filled ? "#215ee9" : "white")};

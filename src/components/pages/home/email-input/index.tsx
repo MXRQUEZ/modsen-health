@@ -7,9 +7,7 @@ const EmailInput: FC = () => {
     <StyledInputWrapper>
       <i className="fa-regular fa-envelope" role="presentation" />
       <StyledEmailInput type="text" name="email" autoComplete="off" aria-label="email" placeholder="Enter your email" />
-      <StyledButton aria-label="send email" aria-details="you will be notified about new updates">
-        Get Started
-      </StyledButton>
+      <StyledButton>Get Started</StyledButton>
     </StyledInputWrapper>
   );
 };
