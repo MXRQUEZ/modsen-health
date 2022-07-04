@@ -27,3 +27,6 @@ declare module "*.jpg" {
   const content: string;
   export default content;
 }
+
+declare const gapi: any;
+declare const google: any;

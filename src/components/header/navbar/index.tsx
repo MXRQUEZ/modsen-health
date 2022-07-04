@@ -1,7 +1,7 @@
 import { FC } from "react";
 import StyledButton from "@/styles/styled-button";
 import { StyledHeaderNavbar, StyledNavbarMenu, StyledMenuItem, StyledCounter } from "./styled";
-import { pages } from "@/components/constants/pages";
+import { pages } from "@/constants/pages";
 import BurgerMenu from "./burger-menu";
 
 const Navbar: FC = () => {

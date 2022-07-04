@@ -1,7 +1,7 @@
 import { FC, useState } from "react";
 import { Keyframes } from "styled-components";
 import { menuUnchecked, menuChecked } from "@animations/burger-menu";
-import { pages } from "@/components/constants/pages";
+import { pages } from "@/constants/pages";
 import {
   StyledBurger,
   StyledBurgerMenuContainer,
