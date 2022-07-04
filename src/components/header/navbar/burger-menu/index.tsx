@@ -1,7 +1,6 @@
 import { FC, useState } from "react";
 import { Keyframes } from "styled-components";
 import { menuUnchecked, menuChecked } from "@animations/burger-menu";
-import { pages } from "@/constants/pages";
 import {
   StyledBurger,
   StyledBurgerMenuContainer,
@@ -11,6 +10,7 @@ import {
   StyledAuthMenuItem,
 } from "./styled";
 import StyledButton from "@/styles/styled-button";
+import { pages } from "@/constants/pages";
 
 const BurgerMenu: FC = () => {
   const [isActive, setActive] = useState<boolean>(false);

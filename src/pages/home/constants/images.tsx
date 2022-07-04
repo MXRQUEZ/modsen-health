@@ -4,7 +4,7 @@ import whiteBigWebp from "@images/white-n.webp";
 import whiteBigPng from "@images/white-n.png";
 import whiteSmallWebp from "@images/white-swearing.webp";
 import whiteSmallPng from "@images/white-swearing.png";
-import { StyledBigBgPicture, StyledHeroPicture, StyledSmallBgPicture } from "../images-block/styled";
+import { StyledBigBgPicture, StyledHeroPicture, StyledSmallBgPicture } from "@components/../images-block/styled";
 
 export const backgroundImages = [
   {

@@ -1,5 +1,5 @@
 import { FC } from "react";
-import StyledButton from "@/styles/styled-button";
+import StyledButton from "@styles/styled-button";
 import { StyledInputWrapper, StyledEmailInput } from "./styled";
 
 const EmailInput: FC = () => {
