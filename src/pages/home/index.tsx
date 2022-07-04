@@ -6,12 +6,12 @@ import {
   StyledMain,
   StyledMainArticle,
   StyledArticleIdea,
-} from "./styled";
+} from "@/pages/home/styled";
 import AchievementsSection from "./achievements-section";
 import ImagesBlock from "./images-block";
 import achievements from "./constants/achievements";
 import EmailInput from "./email-input";
-import { StyledContentContainer } from "@/styles/styled-app";
+import { StyledContentContainer } from "@styles/styled-app";
 
 const Home: FC = () => {
   return (
