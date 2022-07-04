@@ -9,7 +9,7 @@ const Header: FC = () => {
       <StyledContentContainer>
         <StyledHeaderContainer>
           <StyledHeaderTitleWrapper>
-            <i className="fa-solid fa-wind fa-lg logo" aria-label="logo" role="presentation" />
+            <i className="fa-solid fa-wind fa-lg logo" role="presentation" />
             <StyledHeaderTitle aria-label="title">Modsen Health</StyledHeaderTitle>
           </StyledHeaderTitleWrapper>
           <Navbar />

@@ -1,36 +1,53 @@
-import { FC } from "react";
+import { FC, useState } from "react";
+import { Keyframes } from "styled-components";
+import { menuUnchecked, menuChecked } from "@animations/burger-menu";
 import { pages } from "@/components/constants/pages";
-import { StyledBurger, StyledBurgerMenuContainer, StyledBurgerNav, StyledMenuItem, StyledMenuTrigger } from "./styled";
+import {
+  StyledBurger,
+  StyledBurgerMenuContainer,
+  StyledBurgerNav,
+  StyledPagesMenuItem,
+  StyledMenuTrigger,
+  StyledAuthMenuItem,
+} from "./styled";
 import StyledButton from "@/styles/styled-button";
 
 const BurgerMenu: FC = () => {
+  const [isActive, setActive] = useState<boolean>(false);
+  const [animation, setAnimation] = useState<Keyframes>();
+
+  const handleClick = () => {
+    setActive((prevState) => !prevState);
+    setAnimation(isActive ? menuUnchecked : menuChecked);
+  };
+
   return (
-    <StyledBurgerMenuContainer aria-label="burger menu" aria-details="toggles navigation menu" aria-haspopup>
-      <input id="menu-toggle" type="checkbox" aria-hidden />
+    <StyledBurgerMenuContainer aria-label="burger menu" aria-haspopup>
+      <input id="menu-toggle" type="checkbox" aria-hidden onClick={handleClick} />
       <StyledMenuTrigger htmlFor="menu-toggle" aria-label="toggle burger menu" />
-      <StyledBurger role="presentation" />
-      <StyledBurgerNav>
+      <StyledBurger />
+      <StyledBurgerNav animation={animation}>
         <ul className="burger-menu pages" aria-label="pages menu">
           {pages.map(({ name, path, icon }) => (
-            <StyledMenuItem key={name}>
+            <StyledPagesMenuItem key={name}>
               <a href={path}>
                 <i className={`${icon} fa-lg`} role="presentation" />
                 {name}
               </a>
-            </StyledMenuItem>
+            </StyledPagesMenuItem>
           ))}
         </ul>
         <ul className="burger-menu auth" aria-label="authorization menu">
-          <li>
+          <StyledAuthMenuItem>
             <StyledButton variant="secondary" fontSize="16px" shadowed upperCased>
               Log in
             </StyledButton>
-          </li>
-          <li>
+          </StyledAuthMenuItem>
+          <StyledAuthMenuItem>
             <StyledButton variant="secondary" fontSize="16px" filled shadowed upperCased>
               Register
             </StyledButton>
-          </li>
+          </StyledAuthMenuItem>
         </ul>
       </StyledBurgerNav>
     </StyledBurgerMenuContainer>

@@ -10,6 +10,8 @@ export const StyledBgImagesWrapper = styled.div`
   }
 
   & > img {
+    width: 422px;
+    height: 373px;
     position: absolute;
     pointer-events: none;
     user-select: none;

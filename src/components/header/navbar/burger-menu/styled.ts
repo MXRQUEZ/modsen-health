@@ -1,5 +1,4 @@
-import { menuNotChecked, menuChecked } from "@animations/burger-menu";
-import styled from "styled-components";
+import styled, { Keyframes } from "styled-components";
 
 export const StyledMenuTrigger = styled.label`
   position: absolute;
@@ -32,13 +31,13 @@ export const StyledBurger = styled.span`
   }
 `;
 
-export const StyledBurgerNav = styled.nav`
+export const StyledBurgerNav = styled.nav<{ animation?: Keyframes }>`
   position: fixed;
   top: 75px;
   right: 0px;
   background-color: #ebf1ff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
-  animation: ${menuNotChecked} 0.3s ease both;
+  animation: ${(props) => props.animation} 0.3s ease both;
   border-top: 1px solid #333333;
   visibility: hidden;
 
@@ -47,8 +46,8 @@ export const StyledBurgerNav = styled.nav`
   }
 
   & .burger-menu {
+    margin-top: 20px;
     display: none;
-    flex-direction: column;
   }
 
   & .auth {
@@ -59,17 +58,20 @@ export const StyledBurgerNav = styled.nav`
     align-items: center;
     gap: 20px;
 
-    & li {
-      flex: 0 1 25%;
-
-      & button {
-        width: 100%;
-      }
+    @media only screen and (max-width: 479.98px) {
+      flex-direction: column;
     }
   }
 `;
 
-export const StyledMenuItem = styled.li`
+export const StyledAuthMenuItem = styled.li`
+  width: 100%;
+  & button {
+    min-width: 100%;
+  }
+`;
+
+export const StyledPagesMenuItem = styled.li`
   position: relative;
   z-index: 10;
   font-weight: 700;
@@ -77,7 +79,7 @@ export const StyledMenuItem = styled.li`
   width: 100%;
   border-bottom: 1px solid #333;
 
-  & a {
+  & > a {
     display: flex;
     align-items: center;
     width: 100%;
@@ -92,7 +94,7 @@ export const StyledMenuItem = styled.li`
       transition: all 0.5s ease-in-out;
     }
 
-    & i {
+    & > i {
       width: 10%;
       margin-right: 20px;
       justify-self: center;
@@ -100,6 +102,18 @@ export const StyledMenuItem = styled.li`
       border-right: 1px solid #333;
       margin-left: 20px;
       padding: 20px 10px;
+
+      @media only screen and (max-width: 479.98px) {
+        width: 13%;
+        margin-left: 10px;
+        padding: 20px 10px;
+      }
+
+      @media only screen and (max-width: 279.98px) {
+        width: 13%;
+        margin-left: 5px;
+        padding: 20px 0;
+      }
     }
   }
 `;
@@ -133,9 +147,11 @@ export const StyledBurgerMenuContainer = styled.div`
           transition: transform 0.3s ease;
 
           & + nav {
-            animation: ${menuChecked} 0.5s ease both;
+            & > .pages {
+              display: block;
+            }
 
-            & > ul {
+            & > .auth {
               display: flex;
             }
           }

@@ -76,6 +76,8 @@ export const StyledBigBgPicture = styled.picture`
 
 export const StyledHeroPicture = styled.picture`
   position: relative;
+  height: 100%;
+  width: 650px;
   z-index: 5;
 
   & source,
