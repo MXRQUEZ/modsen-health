@@ -1,5 +1,4 @@
-import { menuNotChecked, menuChecked } from "@animations/burger-menu";
-import styled from "styled-components";
+import styled, { Keyframes } from "styled-components";
 
 export const StyledMenuTrigger = styled.label`
   position: absolute;
@@ -32,13 +31,13 @@ export const StyledBurger = styled.span`
   }
 `;
 
-export const StyledBurgerNav = styled.nav`
+export const StyledBurgerNav = styled.nav<{ animation?: Keyframes }>`
   position: fixed;
   top: 75px;
   right: 0px;
   background-color: #ebf1ff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
-  animation: ${menuNotChecked} 0.3s ease both;
+  animation: ${(props) => props.animation} 0.3s ease both;
   border-top: 1px solid #333333;
   visibility: hidden;
 
@@ -148,8 +147,6 @@ export const StyledBurgerMenuContainer = styled.div`
           transition: transform 0.3s ease;
 
           & + nav {
-            animation: ${menuChecked} 0.5s ease both;
-
             & > .pages {
               display: block;
             }

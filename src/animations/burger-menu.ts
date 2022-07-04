@@ -17,7 +17,7 @@ export const menuChecked = keyframes`
   }
 `;
 
-export const menuNotChecked = keyframes`
+export const menuUnchecked = keyframes`
   0% {
     visibility: visible;
     width: 100vw;

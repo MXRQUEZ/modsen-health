@@ -1,4 +1,6 @@
-import { FC } from "react";
+import { FC, useState } from "react";
+import { Keyframes } from "styled-components";
+import { menuUnchecked, menuChecked } from "@animations/burger-menu";
 import { pages } from "@/components/constants/pages";
 import {
   StyledBurger,
@@ -11,12 +13,20 @@ import {
 import StyledButton from "@/styles/styled-button";
 
 const BurgerMenu: FC = () => {
+  const [isActive, setActive] = useState<boolean>(false);
+  const [animation, setAnimation] = useState<Keyframes>();
+
+  const handleClick = () => {
+    setActive((prevState) => !prevState);
+    setAnimation(isActive ? menuUnchecked : menuChecked);
+  };
+
   return (
     <StyledBurgerMenuContainer aria-label="burger menu" aria-haspopup>
-      <input id="menu-toggle" type="checkbox" aria-hidden />
+      <input id="menu-toggle" type="checkbox" aria-hidden onClick={handleClick} />
       <StyledMenuTrigger htmlFor="menu-toggle" aria-label="toggle burger menu" />
       <StyledBurger />
-      <StyledBurgerNav>
+      <StyledBurgerNav animation={animation}>
         <ul className="burger-menu pages" aria-label="pages menu">
           {pages.map(({ name, path, icon }) => (
             <StyledPagesMenuItem key={name}>
