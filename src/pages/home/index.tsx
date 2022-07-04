@@ -1,4 +1,5 @@
 import { FC } from "react";
+import { StyledContentContainer } from "@styles/styled-app";
 import {
   StyledMainProposal,
   StyledMainContainer,
@@ -11,7 +12,6 @@ import AchievementsSection from "./achievements-section";
 import ImagesBlock from "./images-block";
 import achievements from "./constants/achievements";
 import EmailInput from "./email-input";
-import { StyledContentContainer } from "@styles/styled-app";
 
 const Home: FC = () => {
   return (
