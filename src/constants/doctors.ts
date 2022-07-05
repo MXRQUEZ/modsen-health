@@ -2,6 +2,7 @@ import { IDoctor } from "@/types/IDoctor";
 
 export const doctors: IDoctor[] = [
   {
+    id: "JP29",
     name: "Juliana",
     surname: "Peterson",
     age: 29,
@@ -10,6 +11,7 @@ export const doctors: IDoctor[] = [
     experience: 15,
   },
   {
+    id: "JS44",
     name: "Johnny",
     surname: "Sins",
     age: 44,
@@ -18,6 +20,7 @@ export const doctors: IDoctor[] = [
     experience: 25,
   },
   {
+    id: "BT36",
     name: "Bred",
     surname: "Tompson",
     age: 36,
@@ -26,6 +29,7 @@ export const doctors: IDoctor[] = [
     experience: 20,
   },
   {
+    id: "SJ40",
     name: "Shirley",
     surname: "Jackson",
     age: 40,

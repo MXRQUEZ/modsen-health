@@ -15,13 +15,13 @@ const SwiperQuotes: FC<ISwiperQuotesProps> = ({ doctors }) => {
       onSlideChange={() => console.log("slide change")}
       onSwiper={(swiper) => console.log(swiper)}
     >
-      {doctors.map(({ image, name, quote }) => (
-        <SwiperSlide>
+      {doctors.map(({ id, image, name, quote }) => (
+        <SwiperSlide key={id}>
           <Grid container columnSpacing={{ xs: 0.5, sm: 1, md: 2 }}>
-            <Grid item xs={6}>
+            <Grid item>
               <img src={image} alt={`doctor ${name}`} />
             </Grid>
-            <Grid item xs={6}>
+            <Grid item>
               <Typography variant="h3" component="q">
                 {quote}
               </Typography>
