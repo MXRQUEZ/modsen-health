@@ -91,6 +91,11 @@ const GlobalStyles = createGlobalStyle`
     cursor: pointer;
     outline: none;
   }
+
+  q::after,
+  q::before {
+    content: ""
+  }
 `;
 
 export default GlobalStyles;
