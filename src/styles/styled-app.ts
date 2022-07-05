@@ -7,6 +7,11 @@ export const StyledAppWrapper = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
+
+  & main {
+    flex: auto;
+    margin-top: 85px;
+  }
 `;
 
 export const StyledContentContainer = styled.div`

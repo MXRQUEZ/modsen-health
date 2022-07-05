@@ -8,6 +8,10 @@ export const StyledHeaderNavbar = styled.nav`
   align-items: center;
   gap: 100px;
 
+  @media only screen and (max-width: 1400px) {
+    gap: 20px;
+  }
+
   @media only screen and (max-width: 1250px) {
     gap: 10px;
   }
@@ -32,7 +36,6 @@ export const StyledNavbarMenu = styled.ul`
     line-height: calc(19 / 16 * 100%);
     position: relative;
     margin-right: 45px;
-    cursor: pointer;
 
     @media only screen and (max-width: 1250px) {
       margin-right: 30px;
@@ -56,11 +59,9 @@ export const StyledNavbarMenu = styled.ul`
   }
 `;
 
-export const StyledMenuItem = styled.li`
-  color: #7d8790;
-`;
-
 export const StyledNavLink = styled(NavLink)`
+  color: #7d8790;
+
   &.active,
   &:hover,
   &:focus {
@@ -76,6 +77,12 @@ export const StyledNavLink = styled(NavLink)`
       border-radius: 100%;
       left: calc(50% - 3px);
     }
+  }
+
+  &:visited {
+    color: none;
+    text-decoration: none;
+    outline: none;
   }
 `;
 

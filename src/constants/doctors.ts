@@ -2,15 +2,6 @@ import { IDoctor } from "@/types/IDoctor";
 
 export const doctors: IDoctor[] = [
   {
-    id: "JP29",
-    name: "Juliana",
-    surname: "Peterson",
-    age: 29,
-    image: "https://discord.com/channels/@me/631923587078422558/993789223507349504",
-    quote: "Eat well, drink in moderation, and sleep sound, in these three good health abound.",
-    experience: 15,
-  },
-  {
     id: "JS44",
     name: "Johnny",
     surname: "Sins",
@@ -18,6 +9,15 @@ export const doctors: IDoctor[] = [
     image: "https://cdn.discordapp.com/attachments/631923587078422558/993789966419238972/unknown.png",
     quote: "Early to bed and early to rise, makes a man healthy, wealthy and wise.",
     experience: 25,
+  },
+  {
+    id: "JP29",
+    name: "Juliana",
+    surname: "Peterson",
+    age: 29,
+    image: "https://cdn.discordapp.com/attachments/631923587078422558/993789223226322954/unknown.png",
+    quote: "Eat well, drink in moderation, and sleep sound, in these three good health abound.",
+    experience: 15,
   },
   {
     id: "BT36",

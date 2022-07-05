@@ -1,10 +1,5 @@
 import styled from "styled-components";
 
-export const StyledMain = styled.main`
-  flex: auto;
-  margin-top: 85px;
-`;
-
 export const StyledMainContainer = styled.div`
   position: relative;
   display: flex;

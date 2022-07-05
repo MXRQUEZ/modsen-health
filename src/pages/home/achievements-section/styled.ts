@@ -5,7 +5,6 @@ export const StyledAchievementsSection = styled.section`
   margin-top: 20%;
   display: flex;
   justify-content: space-around;
-  align-items: center;
   gap: 60px;
 
   & > div {
