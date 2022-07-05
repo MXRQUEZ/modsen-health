@@ -1,6 +1,7 @@
 import { FC, useState } from "react";
 import { Keyframes } from "styled-components";
 import { menuUnchecked, menuChecked } from "@animations/burger-menu";
+import { NavLink } from "react-router-dom";
 import {
   StyledBurger,
   StyledBurgerMenuContainer,
@@ -30,10 +31,10 @@ const BurgerMenu: FC = () => {
         <ul className="burger-menu pages" aria-label="pages menu">
           {pages.map(({ name, path, icon }) => (
             <StyledPagesMenuItem key={name}>
-              <a href={path}>
+              <NavLink to={path}>
                 <i className={`${icon} fa-lg`} role="presentation" />
                 {name}
-              </a>
+              </NavLink>
             </StyledPagesMenuItem>
           ))}
         </ul>

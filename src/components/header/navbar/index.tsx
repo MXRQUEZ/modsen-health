@@ -1,6 +1,6 @@
 import { FC } from "react";
 import StyledButton from "@/styles/styled-button";
-import { StyledHeaderNavbar, StyledNavbarMenu, StyledMenuItem, StyledCounter } from "./styled";
+import { StyledHeaderNavbar, StyledNavbarMenu, StyledMenuItem, StyledCounter, StyledNavLink } from "./styled";
 import BurgerMenu from "./burger-menu";
 import { pages } from "@/constants/pages";
 
@@ -8,9 +8,9 @@ const Navbar: FC = () => {
   return (
     <StyledHeaderNavbar>
       <StyledNavbarMenu aria-label="pages menu">
-        {pages.map(({ name }) => (
+        {pages.map(({ name, path }) => (
           <StyledMenuItem key={name} aria-label={`${name} page`}>
-            {name}
+            <StyledNavLink to={path}>{name}</StyledNavLink>
           </StyledMenuItem>
         ))}
       </StyledNavbarMenu>

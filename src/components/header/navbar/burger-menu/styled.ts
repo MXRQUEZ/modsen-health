@@ -87,6 +87,7 @@ export const StyledPagesMenuItem = styled.li`
     padding: 20px 0;
     letter-spacing: 1px;
 
+    &.active,
     &:focus {
       color: #215ee9;
       background-color: #ebf1ff;

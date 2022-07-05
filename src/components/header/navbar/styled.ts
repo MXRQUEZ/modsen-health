@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 import bellshake from "@/animations/bellshake";
 
 export const StyledHeaderNavbar = styled.nav`
@@ -57,7 +58,10 @@ export const StyledNavbarMenu = styled.ul`
 
 export const StyledMenuItem = styled.li`
   color: #7d8790;
+`;
 
+export const StyledNavLink = styled(NavLink)`
+  &.active,
   &:hover,
   &:focus {
     color: #215ee9;
