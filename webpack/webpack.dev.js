@@ -7,5 +7,5 @@ module.exports = {
     new DefinePlugin({
       PRODUCTION: JSON.stringify(false),
     }),
-  ]
+  ],
 }
