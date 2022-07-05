@@ -1,13 +1,15 @@
+import { lazy } from "react";
 import { IPage } from "@/types/IPage";
-import Home from "@/pages/home";
-import Doctors from "@/pages/doctors";
+
+const HomePage = lazy(() => import("@/pages/home"));
+const DoctorsPage = lazy(() => import("@/pages/doctors"));
 
 export const pages: IPage[] = [
   {
     name: "Home",
     path: "/",
     icon: "fa-solid fa-house",
-    component: <Home />,
+    component: <HomePage />,
   },
   {
     name: "Services",
@@ -25,7 +27,7 @@ export const pages: IPage[] = [
     name: "Doctors",
     path: "/doctors",
     icon: "fa-solid fa-user-nurse",
-    component: <Doctors />,
+    component: <DoctorsPage />,
   },
   {
     name: "Contact",
