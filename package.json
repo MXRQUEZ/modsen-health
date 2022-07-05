@@ -1,11 +1,14 @@
 {
+  "homepage": "https://github.com/MXRQUEZ.github.io/modsen-health",
   "name": "modsen-health",
   "version": "1.0.0",
   "description": "Modsen health site using webpack and firebase",
   "main": "./src/index.tsx",
   "scripts": {
     "start": "webpack serve --config webpack/webpack.config.js --env env=dev --open",
-    "build": "webpack --config webpack/webpack.config.js --env env=prod"
+    "build": "webpack --config webpack/webpack.config.js --env env=prod",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "author": "Sergey Svistun",
   "license": "MIT",
@@ -49,6 +52,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.30.0",
     "eslint-plugin-unused-imports": "^2.0.0",
+    "gh-pages": "^4.0.0",
     "html-webpack-plugin": "^5.5.0",
     "prettier": "^2.7.0",
     "prettier-eslint": "^15.0.1",
