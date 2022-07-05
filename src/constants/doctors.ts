@@ -1,6 +1,6 @@
 import { IDoctor } from "@/types/IDoctor";
 
-export const DOCTORS: IDoctor[] = [
+export const doctors: IDoctor[] = [
   {
     name: "Juliana",
     surname: "Peterson",
