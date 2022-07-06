@@ -2,7 +2,7 @@ import { Box, Button, List, ListItem, ListItemText, Typography } from "@mui/mate
 import { Container } from "@mui/system";
 import { useEffect, useState } from "react";
 import { getCalendarEvents } from "@utils/getCalendarEvents";
-import { loadGAPI, loadGIS } from "@/utils/loadGoogleAPI";
+import { loadGAPI, loadGIS } from "@/utils/googleAPI";
 import { useDate } from "@/hooks/useDate";
 import { getTimeBordersString } from "@/utils/getTimeBordersString";
 import { ICalendarEvent } from "@/types/ICalendarEvent";

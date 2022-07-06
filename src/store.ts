@@ -1,16 +1,23 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import { authReducer } from "./store/reducers/auth";
+import createSagaMiddleware from "redux-saga";
+import { authReducer } from "./reducers/auth";
+import { doctorsReducer } from "./reducers/doctors";
+import { rootSaga } from "./sagas";
 
-const rootReducer = combineReducers({
-  authReducer,
+const sagaMiddleware = createSagaMiddleware();
+
+export const rootReducer = combineReducers({
+  auth: authReducer,
+  doctors: doctorsReducer,
 });
 
-export const setupStore = () => {
+const setupStore = () => {
   return configureStore({
     reducer: rootReducer,
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(sagaMiddleware),
   });
 };
 
-export type RootState = ReturnType<typeof rootReducer>;
-export type AppStore = ReturnType<typeof setupStore>;
-export type AppDispatch = AppStore["dispatch"];
+export const store = setupStore();
+
+sagaMiddleware.run(rootSaga);
