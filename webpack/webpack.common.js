@@ -9,6 +9,14 @@ module.exports = {
     path: path.resolve(__dirname, '../', './build'),
     clean: true,
   },
+  devServer: {
+    historyApiFallback: true,
+    static: {
+     directory: path.join(__dirname, "/"),
+   },
+    port: 8081,
+    open: true
+  },
   resolve: {
     extensions: [".js", ".jsx", ".ts", ".tsx"], // using import without file-extensions
     plugins: [

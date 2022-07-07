@@ -1,31 +1,43 @@
 import { FC } from "react";
-import StyledButton from "@/styles/styled-button";
-import { StyledHeaderNavbar, StyledNavbarMenu, StyledMenuItem, StyledCounter } from "./styled";
-import { pages } from "@/components/constants/pages";
-import BurgerMenu from "./burger-menu";
+import StyledButton from "@/styles/styledButton";
+import BurgerMenu from "./BurgerMenu";
+import { pages } from "@/constants/pages";
+import {
+  HeaderNavbar,
+  NavbarMenu,
+  NavLinkStyled,
+  Counter,
+  NotificationIcon,
+  MenuItem,
+  NotificationButton,
+} from "./styled";
 
 const Navbar: FC = () => {
   return (
-    <StyledHeaderNavbar>
-      <StyledNavbarMenu aria-label="pages menu">
-        {pages.map(({ name }) => (
-          <StyledMenuItem key={name} aria-label={`${name} page`}>
-            {name}
-          </StyledMenuItem>
+    <HeaderNavbar>
+      <NavbarMenu aria-label="pages menu">
+        {pages.map(({ name, path }) => (
+          <MenuItem key={name} aria-label={`${name} page`}>
+            <NavLinkStyled to={path}>{name}</NavLinkStyled>
+          </MenuItem>
         ))}
-      </StyledNavbarMenu>
-      <StyledNavbarMenu aria-label="authorization menu">
-        <StyledMenuItem aria-label="log in">Log In</StyledMenuItem>
-        <li aria-label="register">
+      </NavbarMenu>
+      <NavbarMenu aria-label="authorization menu">
+        <MenuItem aria-label="log in">
+          <NavLinkStyled to="/login">Log In</NavLinkStyled>
+        </MenuItem>
+        <MenuItem aria-label="register">
           <StyledButton aria-label="registration button">Register</StyledButton>
-        </li>
-        <StyledMenuItem aria-label="notifications">
-          <StyledCounter aria-label="notification count">2</StyledCounter>
-          <i className="fa-regular fa-bell fa-lg notification-bell" role="presentation" />
-        </StyledMenuItem>
-      </StyledNavbarMenu>
+        </MenuItem>
+        <MenuItem aria-label="notifications">
+          <NotificationButton aria-haspopup aria-label="notifications button">
+            <Counter aria-label="notification count">2</Counter>
+            <NotificationIcon className="fa-regular fa-bell fa-lg notification-bell" role="presentation" />
+          </NotificationButton>
+        </MenuItem>
+      </NavbarMenu>
       <BurgerMenu />
-    </StyledHeaderNavbar>
+    </HeaderNavbar>
   );
 };
 

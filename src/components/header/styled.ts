@@ -1,34 +1,34 @@
 import styled from "styled-components";
 
-export const StyledHeader = styled.header`
+export const HeaderStyled = styled.header`
   position: absolute;
   width: 100%;
   left: 0;
   top: 0;
   z-index: 50;
 
-  @media only screen and (max-width: 767.98px) {
+  @media only screen and (max-width: ${({ theme: { sizes } }) => sizes.sm}) {
     position: fixed;
     background-color: white;
   }
 `;
 
-export const StyledHeaderContainer = styled.div`
+export const HeaderContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
   min-height: 85px;
 
-  @media only screen and (max-width: 767.98px) {
+  @media only screen and (max-width: ${({ theme: { sizes } }) => sizes.md}) {
     min-height: 75px;
   }
 
-  @media only screen and (max-width: 479.98px) {
+  @media only screen and (max-width: ${({ theme: { sizes } }) => sizes.xs}) {
     min-height: 65px;
   }
 `;
 
-export const StyledHeaderTitleWrapper = styled.div`
+export const TitleWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -41,29 +41,31 @@ export const StyledHeaderTitleWrapper = styled.div`
     filter: brightness(120%);
   }
 
-  @media only screen and (max-width: 1250px) {
+  @media only screen and (max-width: ${({ theme: { sizes } }) => sizes.lg}) {
     margin-right: 40px;
   }
 
-  @media only screen and (max-width: 991.98px) {
+  @media only screen and (max-width: ${({ theme: { sizes } }) => sizes.md}) {
     margin-right: 20px;
   }
 `;
 
-export const StyledHeaderTitle = styled.span`
-  color: #333333;
+export const Title = styled.span`
+  color: ${({ theme: { colors } }) => colors.secondary};
   white-space: nowrap;
   margin-left: 10px;
 
-  @media only screen and (max-width: 991.98px) {
+  @media only screen and (max-width: ${({ theme: { sizes } }) => sizes.md}) {
     display: none;
   }
 
-  @media only screen and (max-width: 767.98px) {
+  @media only screen and (max-width: ${({ theme: { sizes } }) => sizes.sm}) {
     display: block;
   }
 
-  @media only screen and (max-width: 479.98px) {
+  @media only screen and (max-width: ${({ theme: { sizes } }) => sizes.xs}) {
     display: none;
   }
 `;
+
+export const Logo = styled.i``;
