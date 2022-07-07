@@ -1,21 +1,21 @@
 import { FC } from "react";
-import { StyledContentContainer } from "@/styles/styled-app";
-import Navbar from "./navbar";
-import { StyledHeader, StyledHeaderContainer, StyledHeaderTitleWrapper, StyledHeaderTitle } from "./styled";
+import { AppContentContainer } from "@/styles/styledApp";
+import Navbar from "./Navbar";
+import { HeaderStyled, HeaderContainer, TitleWrapper, Title, Logo } from "./styled";
 
 const Header: FC = () => {
   return (
-    <StyledHeader>
-      <StyledContentContainer>
-        <StyledHeaderContainer>
-          <StyledHeaderTitleWrapper>
-            <i className="fa-solid fa-wind fa-lg logo" role="presentation" />
-            <StyledHeaderTitle aria-label="title">Modsen Health</StyledHeaderTitle>
-          </StyledHeaderTitleWrapper>
+    <HeaderStyled>
+      <AppContentContainer>
+        <HeaderContainer>
+          <TitleWrapper>
+            <Logo className="fa-solid fa-wind fa-lg" role="presentation" />
+            <Title aria-label="title">Modsen Health</Title>
+          </TitleWrapper>
           <Navbar />
-        </StyledHeaderContainer>
-      </StyledContentContainer>
-    </StyledHeader>
+        </HeaderContainer>
+      </AppContentContainer>
+    </HeaderStyled>
   );
 };
 

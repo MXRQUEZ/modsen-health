@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledImagesBlock = styled.div`
+export const ImagesWrapper = styled.div`
   position: relative;
   display: flex;
   justify-content: right;
@@ -8,20 +8,23 @@ export const StyledImagesBlock = styled.div`
   min-height: 100%;
   flex: 1 1 60%;
 
-  & picture,
-  source,
-  img {
-    pointer-events: none;
-    user-select: none;
-  }
-
   @media only screen and (max-width: 1250px) {
     justify-content: center;
     align-items: center;
   }
 `;
 
-export const StyledSmallBgPicture = styled.picture`
+export const SourceStyled = styled.source`
+  pointer-events: none;
+  user-select: none;
+`;
+
+export const ImageStyled = styled.img`
+  pointer-events: none;
+  user-select: none;
+`;
+
+export const SmallBgPicture = styled.picture`
   position: absolute;
   height: 100%;
   width: 100%;
@@ -29,8 +32,8 @@ export const StyledSmallBgPicture = styled.picture`
   top: 20px;
   z-index: 0;
 
-  & source,
-  & img {
+  & .images__source,
+  & .images__img {
     object-fit: cover;
     max-width: 650px;
     max-height: 190px;
@@ -49,7 +52,7 @@ export const StyledSmallBgPicture = styled.picture`
   }
 `;
 
-export const StyledBigBgPicture = styled.picture`
+export const BigBgPicture = styled.picture`
   position: absolute;
   height: 100%;
   width: 100%;
@@ -57,8 +60,8 @@ export const StyledBigBgPicture = styled.picture`
   top: 180px;
   z-index: 0;
 
-  & source,
-  & img {
+  & .images__source,
+  & .images__img {
     object-fit: cover;
     max-width: 900px;
     max-height: 800px;
@@ -74,14 +77,14 @@ export const StyledBigBgPicture = styled.picture`
   }
 `;
 
-export const StyledHeroPicture = styled.picture`
+export const HeroPicture = styled.picture`
   position: relative;
   height: 100%;
   width: 650px;
   z-index: 5;
 
-  & source,
-  & img {
+  & .images__source,
+  & .images__img {
     object-fit: cover;
     max-width: 700px;
     max-height: 800px;

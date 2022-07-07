@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import { Button } from "@mui/material";
-import SwiperQuotes from "./swiper-quotes";
+import SwiperQuotes from "./SwiperQuotes";
 import { useAppDispatch, useTypedSelector } from "@/hooks/redux";
 import { fetchDoctorsRequest } from "@/actions/doctors";
-import Loader from "@/components/loader";
+import Loader from "@/components/Loader";
 import { signInRequest } from "../../actions/auth";
 
 const Doctors = () => {

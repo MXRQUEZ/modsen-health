@@ -1,23 +1,23 @@
 import { FC } from "react";
 import { Outlet } from "react-router-dom";
-import Header from "@/components/header";
-import GlobalStyles from "@/styles/styled-global";
-import { StyledAppWrapper, StyledContentContainer } from "@/styles/styled-app";
-import BackgroundArcs from "@/components/background-arcs";
+import Header from "@/components/Header";
+import GlobalStyles from "@/styles/styledGlobal";
+import { AppWrapper, MainStyled, AppContentContainer } from "@/styles/styledApp";
+import BackgroundArcs from "@/components/BackgroundArcs";
 
 const Layout: FC = () => {
   return (
     <>
       <GlobalStyles />
-      <StyledAppWrapper>
+      <AppWrapper>
         <BackgroundArcs />
         <Header />
-        <main>
-          <StyledContentContainer>
+        <MainStyled>
+          <AppContentContainer>
             <Outlet />
-          </StyledContentContainer>
-        </main>
-      </StyledAppWrapper>
+          </AppContentContainer>
+        </MainStyled>
+      </AppWrapper>
     </>
   );
 };

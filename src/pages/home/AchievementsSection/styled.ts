@@ -1,18 +1,13 @@
 import styled from "styled-components";
 
-export const StyledAchievementsSection = styled.section`
+export const SectionStyled = styled.section`
   position: relative;
   margin-top: 20%;
   display: flex;
   justify-content: space-around;
   gap: 60px;
 
-  & > div {
-    color: #333333;
-    text-align: center;
-  }
-
-  & > div:nth-child(even) > h3 {
+  & > .achievement:nth-child(even) > .achievement__title {
     color: #215ee9;
   }
 
@@ -21,16 +16,21 @@ export const StyledAchievementsSection = styled.section`
   }
 `;
 
-export const StyledAchievementTitle = styled.h3`
+export const Achievement = styled.div`
+  color: #333333;
+  text-align: center;
+`;
+
+export const Title = styled.h3`
   font-size: 56px;
-  line-height: calc(66 / 56 * 100%);
+  line-height: 118%;
   letter-spacing: -4px;
   margin-bottom: 10px;
 `;
 
-export const StyledAchievementDescription = styled.p`
+export const Description = styled.p`
   text-align: center;
   color: black;
   font-weight: 400;
-  line-height: calc(24 / 16 * 100%);
+  line-height: 150%;
 `;

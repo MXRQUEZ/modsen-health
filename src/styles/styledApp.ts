@@ -1,20 +1,20 @@
 import styled from "styled-components";
 
-export const StyledAppWrapper = styled.div`
+export const AppWrapper = styled.div`
   min-height: 100vh;
   background-color: #ebf1ff;
   overflow: hidden;
   position: relative;
   display: flex;
   flex-direction: column;
-
-  & main {
-    flex: auto;
-    margin-top: 85px;
-  }
 `;
 
-export const StyledContentContainer = styled.div`
+export const MainStyled = styled.main`
+  flex: auto;
+  margin-top: 85px;
+`;
+
+export const AppContentContainer = styled.div`
   max-width: 1400px;
   margin: 0 auto;
 

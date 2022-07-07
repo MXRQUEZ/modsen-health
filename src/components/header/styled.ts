@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledHeader = styled.header`
+export const HeaderStyled = styled.header`
   position: absolute;
   width: 100%;
   left: 0;
@@ -13,7 +13,7 @@ export const StyledHeader = styled.header`
   }
 `;
 
-export const StyledHeaderContainer = styled.div`
+export const HeaderContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -28,7 +28,7 @@ export const StyledHeaderContainer = styled.div`
   }
 `;
 
-export const StyledHeaderTitleWrapper = styled.div`
+export const TitleWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -50,7 +50,7 @@ export const StyledHeaderTitleWrapper = styled.div`
   }
 `;
 
-export const StyledHeaderTitle = styled.span`
+export const Title = styled.span`
   color: #333333;
   white-space: nowrap;
   margin-left: 10px;
@@ -67,3 +67,5 @@ export const StyledHeaderTitle = styled.span`
     display: none;
   }
 `;
+
+export const Logo = styled.i``;

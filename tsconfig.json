@@ -10,7 +10,6 @@
       "@images/*": ["src/assets/images/*"],
       "@fonts/*": ["src/assets/fonts/*"],
       "@styles/*": ["src/styles/*"],
-      "@store/*": ["src/store/*"],
       "@constants/*": ["src/constants/*"],
       "@pages/*": ["src/pages/*"],
       "@animations/*": ["src/animations/*"],

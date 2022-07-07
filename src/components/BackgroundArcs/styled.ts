@@ -1,21 +1,12 @@
 import styled from "styled-components";
 
-export const StyledBgImagesWrapper = styled.div`
+export const ImagesWrapper = styled.div`
   position: absolute;
   height: 100vh;
   width: 100vw;
 
   @media only screen and (max-width: 1250px) {
     display: none;
-  }
-
-  & > img {
-    width: 422px;
-    height: 373px;
-    position: absolute;
-    pointer-events: none;
-    user-select: none;
-    opacity: 0.3;
   }
 
   & .bottom-arc1 {
@@ -85,4 +76,13 @@ export const StyledBgImagesWrapper = styled.div`
     top: 5px;
     transform: rotate(175deg);
   }
+`;
+
+export const ArcImage = styled.img`
+  width: 422px;
+  height: 373px;
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+  opacity: 0.3;
 `;

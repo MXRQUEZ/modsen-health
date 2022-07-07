@@ -13,7 +13,7 @@ const StyledButton = styled.button<StyledButtonProps>`
   text-transform: ${(props) => props.upperCased && "uppercase"};
   letter-spacing: ${(props) => props.upperCased && "1px"};
   white-space: nowrap;
-  color: ${({ variant, filled }) => (variant === "primary" || filled ? "white" : "#333333")};
+  color: ${({ variant, filled }) => (variant === "primary" || filled ? "white" : "#215ee9")};
   height: fit-content;
   background-color: ${({ variant, filled }) => (variant === "primary" || filled ? "#215ee9" : "white")};
   border-radius: ${(props) => props.variant === "primary" && "40px"};

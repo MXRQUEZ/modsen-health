@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledMainContainer = styled.div`
+export const PageContainer = styled.div`
   position: relative;
   display: flex;
 
@@ -9,7 +9,7 @@ export const StyledMainContainer = styled.div`
   }
 `;
 
-export const StyledMainArticle = styled.article`
+export const ArticleStyled = styled.article`
   margin-top: 35px;
   display: flex;
   height: 100%;
@@ -33,13 +33,13 @@ export const StyledMainArticle = styled.article`
   }
 `;
 
-export const StyledArticleIdea = styled.h6`
+export const Proposal = styled.h6`
   color: #215ee9;
   font-size: 14px;
-  line-height: calc(24 / 14 * 100%);
+  line-height: 171%;
 `;
 
-export const StyledMainProposal = styled.h1`
+export const Title = styled.h1`
   color: #215ee9;
   font-size: 65px;
   line-height: 101.8%;
@@ -47,11 +47,11 @@ export const StyledMainProposal = styled.h1`
   margin: 20px 0;
 `;
 
-export const StyledArticleDescription = styled.p`
+export const Description = styled.p`
   color: #215ee9;
   font-weight: 400;
   font-size: 20px;
-  line-height: calc(30 / 20 * 100%);
+  line-height: 150%;
   opacity: 0.7;
   margin-top: 30px;
   margin-bottom: 50px;

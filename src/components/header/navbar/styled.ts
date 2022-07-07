@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import bellshake from "@/animations/bellshake";
 
-export const StyledHeaderNavbar = styled.nav`
+export const HeaderNavbar = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -21,7 +21,7 @@ export const StyledHeaderNavbar = styled.nav`
   }
 `;
 
-export const StyledNavbarMenu = styled.ul`
+export const NavbarMenu = styled.ul`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,37 +29,38 @@ export const StyledNavbarMenu = styled.ul`
   @media only screen and (max-width: 767.98px) {
     display: none;
   }
+`;
 
-  & li {
-    text-align: center;
-    white-space: nowrap;
-    line-height: calc(19 / 16 * 100%);
-    position: relative;
-    margin-right: 45px;
+export const MenuItem = styled.li`
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+  position: relative;
+  line-height: 118%;
+  margin-right: 45px;
 
-    @media only screen and (max-width: 1250px) {
-      margin-right: 30px;
-    }
+  @media only screen and (max-width: 1250px) {
+    margin-right: 30px;
+  }
 
-    @media only screen and (max-width: 991.98px) {
-      margin-right: 20px;
-    }
-
-    & .notification-bell {
-      position: relative;
-
-      &:hover,
-      &:focus {
-        animation: ${bellshake} 0.7s cubic-bezier(0.36, 0.07, 0.19, 0.97) infinite;
-        backface-visibility: hidden;
-        transform-origin: top right;
-        filter: brightness(120%);
-      }
-    }
+  @media only screen and (max-width: 991.98px) {
+    margin-right: 20px;
   }
 `;
 
-export const StyledNavLink = styled(NavLink)`
+export const NotificationIcon = styled.i`
+  position: relative;
+
+  &:hover,
+  &:focus {
+    animation: ${bellshake} 0.7s cubic-bezier(0.36, 0.07, 0.19, 0.97) infinite;
+    backface-visibility: hidden;
+    transform-origin: top right;
+    filter: brightness(120%);
+  }
+`;
+
+export const NavLinkStyled = styled(NavLink)`
   color: #7d8790;
 
   &.active,
@@ -86,7 +87,12 @@ export const StyledNavLink = styled(NavLink)`
   }
 `;
 
-export const StyledCounter = styled.span`
+export const NotificationButton = styled.button`
+  position: relative;
+  font-size: inherit;
+`;
+
+export const Counter = styled.span`
   color: white;
   height: 8px;
   width: 8px;
@@ -104,7 +110,7 @@ export const StyledCounter = styled.span`
   right: -8px;
   z-index: 3;
 
-  &:hover ~ i {
+  &:hover ~ .notification-bell {
     animation: ${bellshake} 0.7s cubic-bezier(0.36, 0.07, 0.19, 0.97) infinite;
     backface-visibility: hidden;
     transform-origin: top right;
