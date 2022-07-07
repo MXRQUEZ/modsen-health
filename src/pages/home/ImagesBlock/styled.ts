@@ -8,7 +8,7 @@ export const ImagesWrapper = styled.div`
   min-height: 100%;
   flex: 1 1 60%;
 
-  @media only screen and (max-width: 1250px) {
+  @media only screen and (max-width: ${({ theme: { sizes } }) => sizes.lg}) {
     justify-content: center;
     align-items: center;
   }
@@ -39,15 +39,15 @@ export const SmallBgPicture = styled.picture`
     max-height: 190px;
   }
 
-  @media only screen and (max-width: 1250px) {
+  @media only screen and (${({ theme: { sizes } }) => sizes.lg}) {
     left: 250px;
   }
 
-  @media only screen and (max-width: 991.98px) {
+  @media only screen and (max-width: ${({ theme: { sizes } }) => sizes.md}) {
     margin-bottom: 40px;
   }
 
-  @media only screen and (max-width: 767.98px) {
+  @media only screen and (max-width: ${({ theme: { sizes } }) => sizes.sm}) {
     display: none;
   }
 `;
@@ -67,11 +67,11 @@ export const BigBgPicture = styled.picture`
     max-height: 800px;
   }
 
-  @media only screen and (max-width: 1250px) {
+  @media only screen and (max-width: ${({ theme: { sizes } }) => sizes.lg}) {
     left: 0;
   }
 
-  @media only screen and (max-width: 767.98px) {
+  @media only screen and (max-width: ${({ theme: { sizes } }) => sizes.sm}) {
     left: -20%;
     top: 40px;
   }
@@ -91,7 +91,7 @@ export const HeroPicture = styled.picture`
     filter: drop-shadow(50px -56px 104px rgba(28, 91, 235, 0.05));
   }
 
-  @media only screen and (max-width: 991.98px) {
+  @media only screen and (max-width: ${({ theme: { sizes } }) => sizes.md}) {
     top: 20px;
     align-self: center;
   }

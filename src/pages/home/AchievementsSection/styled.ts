@@ -8,21 +8,21 @@ export const SectionStyled = styled.section`
   gap: 60px;
 
   & > .achievement:nth-child(even) > .achievement__title {
-    color: #215ee9;
+    color: ${({ theme: { colors } }) => colors.primary};
   }
 
-  @media only screen and (max-width: 767.98px) {
+  @media only screen and (max-width: ${({ theme: { sizes } }) => sizes.sm}) {
     display: none;
   }
 `;
 
 export const Achievement = styled.div`
-  color: #333333;
+  color: ${({ theme: { colors } }) => colors.secondary};
   text-align: center;
 `;
 
 export const Title = styled.h3`
-  font-size: 56px;
+  font-size: ${({ theme: { fontSizes } }) => fontSizes.xxl};
   line-height: 118%;
   letter-spacing: -4px;
   margin-bottom: 10px;

@@ -52,9 +52,9 @@ const GlobalStyles = createGlobalStyle`
   body {
     width: 100%;
     line-height: 1;
-    font-size: 16px;
-    color: #333333;
-    font-family: 'Roboto', sans-serif;
+    font-size: ${({ theme: { fontSizes } }) => fontSizes.sm};
+    color: ${({ theme: { colors } }) => colors.secondary};
+    font-family: ${({ theme: { fontFamily } }) => fontFamily}, sans-serif;
     font-style: normal;
     font-weight: 700;
     -ms-text-size-adjust: 100%;
@@ -63,7 +63,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   i {
-    color: #215ee9;
+    color: ${({ theme: { colors } }) => colors.primary};
   }
 
   input,

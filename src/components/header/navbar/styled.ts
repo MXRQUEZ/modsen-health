@@ -8,16 +8,12 @@ export const HeaderNavbar = styled.nav`
   align-items: center;
   gap: 100px;
 
-  @media only screen and (max-width: 1400px) {
+  @media only screen and (max-width: ${({ theme: { sizes } }) => sizes.xl}) {
     gap: 20px;
   }
 
-  @media only screen and (max-width: 1250px) {
+  @media only screen and (max-width: ${({ theme: { sizes } }) => sizes.lg}) {
     gap: 10px;
-  }
-
-  @media only screen and (max-width: 991.98px) {
-    gap: 50px;
   }
 `;
 
@@ -26,7 +22,7 @@ export const NavbarMenu = styled.ul`
   justify-content: center;
   align-items: center;
 
-  @media only screen and (max-width: 767.98px) {
+  @media only screen and (max-width: ${({ theme: { sizes } }) => sizes.sm}) {
     display: none;
   }
 `;
@@ -39,11 +35,11 @@ export const MenuItem = styled.li`
   line-height: 118%;
   margin-right: 45px;
 
-  @media only screen and (max-width: 1250px) {
+  @media only screen and (max-width: ${({ theme: { sizes } }) => sizes.lg}) {
     margin-right: 30px;
   }
 
-  @media only screen and (max-width: 991.98px) {
+  @media only screen and (max-width: ${({ theme: { sizes } }) => sizes.md}) {
     margin-right: 20px;
   }
 `;
@@ -61,18 +57,18 @@ export const NotificationIcon = styled.i`
 `;
 
 export const NavLinkStyled = styled(NavLink)`
-  color: #7d8790;
+  color: ${({ theme: { colors } }) => colors.gray};
 
   &.active,
   &:hover,
   &:focus {
-    color: #215ee9;
+    color: ${({ theme: { colors } }) => colors.primary};
 
     &::before {
       content: "";
       position: absolute;
       top: 25px;
-      background: #215ee9;
+      background: ${({ theme: { colors } }) => colors.primary};
       width: 7px;
       height: 7px;
       border-radius: 100%;
@@ -99,7 +95,7 @@ export const Counter = styled.span`
   padding: 8px;
   background-color: red;
   border-radius: 50%;
-  font-size: 10px;
+  font-size: ${({ theme: { fontSizes } }) => fontSizes.xxs};
   display: flex;
   align-items: center;
   justify-content: center;

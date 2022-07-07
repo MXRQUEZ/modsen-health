@@ -5,7 +5,7 @@ export const ImagesWrapper = styled.div`
   height: 100vh;
   width: 100vw;
 
-  @media only screen and (max-width: 1250px) {
+  @media only screen and (max-width: ${({ theme: { sizes } }) => sizes.lg}) {
     display: none;
   }
 

@@ -1,22 +1,20 @@
 import styled from "styled-components";
 
-export const InputWrapper = styled.div`
+export const InputWrapper = styled.div<{ ml?: string }>`
   position: relative;
   width: 100%;
   display: flex;
-  width: 100%;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
+  font-family: inherit;
   z-index: 10;
 
-  @media only screen and (max-width: 991.98px) {
+  @media only screen and (max-width: ${({ theme: { sizes } }) => sizes.md}) {
     margin-bottom: 40px;
   }
 
   & button {
     align-self: center;
     justify-self: center;
-    margin-left: -140px;
+    margin-left: ${({ ml }) => ml || "-175px"};
   }
 `;
 
@@ -30,18 +28,18 @@ export const InputIcon = styled.i`
   opacity: 0.5;
 `;
 
-export const StyledInput = styled.input`
+export const StyledInput = styled.input<{ width?: string }>`
   background-color: white;
   display: block;
-  width: 100%;
+  width: ${({ width }) => width || "100%"};
   border-radius: 40px;
   padding: 25px 150px 25px 50px;
   line-height: 118%;
-  color: #333333;
+  color: #${({ theme: { colors } }) => colors.secondary};
 
   &:hover,
   &:focus {
-    outline: 1px solid #215ee9;
+    outline: 1px solid ${({ theme: { colors } }) => colors.primary};
   }
 
   &::placeholder {

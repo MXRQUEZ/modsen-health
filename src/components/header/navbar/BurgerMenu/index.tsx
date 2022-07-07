@@ -21,7 +21,7 @@ const BurgerMenu: FC = () => {
   const [isActive, setActive] = useState<boolean>(false);
   const [animation, setAnimation] = useState<Keyframes>();
 
-  const handleClick = () => {
+  const handleChange = () => {
     setActive((prevState) => !prevState);
     setAnimation(isActive ? menuUnchecked : menuChecked);
   };
@@ -34,7 +34,7 @@ const BurgerMenu: FC = () => {
         type="checkbox"
         checked={isActive}
         aria-hidden
-        onClick={handleClick}
+        onChange={handleChange}
       />
       <MenuTriggerLabel htmlFor="menu-toggle" className="menu__trigger" aria-label="toggle burger menu" />
       <Burger className="menu__burger" />
@@ -42,7 +42,7 @@ const BurgerMenu: FC = () => {
         <NavPagesMenu className="nav__menu pages" aria-label="pages menu">
           {pages.map(({ name, path, icon }) => (
             <PagesMenuItem key={name}>
-              <NavLinkStyled to={path} onClick={handleClick}>
+              <NavLinkStyled to={path} onClick={handleChange}>
                 <PageIcon className={`${icon} fa-lg`} role="presentation" />
                 {name}
               </NavLinkStyled>

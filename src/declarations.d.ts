@@ -1,3 +1,4 @@
+import theme from "@constants/theme";
 declare module "*.scss" {
   const content: { [className: string]: string };
   export default content;
@@ -26,6 +27,11 @@ declare module "*.webp" {
 declare module "*.jpg" {
   const content: string;
   export default content;
+}
+
+declare module "styled-components" {
+  type Theme = typeof theme;
+  export interface DefaultTheme extends Theme {}
 }
 
 declare const gapi: any;

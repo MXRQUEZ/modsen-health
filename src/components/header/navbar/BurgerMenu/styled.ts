@@ -17,7 +17,7 @@ export const Burger = styled.span`
   &::before,
   &::after {
     position: absolute;
-    background: #333333;
+    background: ${({ theme: { colors } }) => colors.secondary};
     width: 30px;
     height: 4px;
     opacity: 0.95;
@@ -38,13 +38,13 @@ export const BurgerMenuNav = styled.nav<{ animation?: Keyframes }>`
   position: fixed;
   top: 75px;
   right: 0px;
-  background-color: #ebf1ff;
+  background-color: ${({ theme: { colors } }) => colors.background};
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
   animation: ${(props) => props.animation} 0.3s ease both;
   border-top: 1px solid #333333;
   visibility: hidden;
 
-  @media only screen and (max-width: 479.98px) {
+  @media only screen and (max-width: ${({ theme: { sizes } }) => sizes.xs}) {
     top: 65px;
   }
 
@@ -64,7 +64,7 @@ export const NavAuthMenu = styled.ul`
   align-items: center;
   gap: 20px;
 
-  @media only screen and (max-width: 479.98px) {
+  @media only screen and (max-width: ${({ theme: { sizes } }) => sizes.xs}) {
     flex-direction: column;
   }
 `;
@@ -82,21 +82,21 @@ export const PagesMenuItem = styled.li`
   font-weight: 700;
   line-height: 1.8;
   width: 100%;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid ${({ theme: { colors } }) => colors.secondary};
 `;
 
 export const NavLinkStyled = styled(NavLink)`
   display: flex;
   align-items: center;
   width: 100%;
-  color: #333;
+  color: ${({ theme: { colors } }) => colors.gray};
   padding: 20px 0;
   letter-spacing: 1px;
 
   &.active,
   &:focus {
-    color: #215ee9;
-    background-color: #ebf1ff;
+    color: ${({ theme: { colors } }) => colors.primary};
+    background-color: ${({ theme: { colors } }) => colors.background};
     transition: all 0.5s ease-in-out;
   }
 `;
@@ -106,17 +106,17 @@ export const PageIcon = styled.i`
   margin-right: 20px;
   justify-self: center;
   align-self: center;
-  border-right: 1px solid #333;
+  border-right: 1px solid ${({ theme: { colors } }) => colors.secondary};
   margin-left: 20px;
   padding: 20px 10px;
 
-  @media only screen and (max-width: 479.98px) {
+  @media only screen and (max-width: ${({ theme: { sizes } }) => sizes.xs}) {
     width: 13%;
     margin-left: 10px;
     padding: 20px 10px;
   }
 
-  @media only screen and (max-width: 279.98px) {
+  @media only screen and (max-width: ${({ theme: { sizes } }) => sizes.xxs}) {
     width: 13%;
     margin-left: 5px;
     padding: 20px 0;
@@ -126,7 +126,7 @@ export const PageIcon = styled.i`
 export const BurgerMenuContainer = styled.div`
   display: none;
 
-  @media only screen and (max-width: 767.98px) {
+  @media only screen and (max-width: ${({ theme: { sizes } }) => sizes.sm}) {
     display: flex;
     justify-content: center;
     align-items: center;
